@@ -3,6 +3,7 @@ interface Props {
   title: string;
   skills: {
     name: string;
+    class?: string;
     icon: any;
   }[];
 }
@@ -27,7 +28,7 @@ const { title, skills } = Astro.props;
     {
       skills.map((skill) => (
         <li class="rounded-2xl group flex flex-col fle justify-center items-center">
-          <skill.icon class="size-8 lg:size-10" />
+          <skill.icon class={`size-8 lg:size-10 ${skill?.class}`} />
           <span class="text-sm w-full text-center">{skill.name}</span>
         </li>
       ))

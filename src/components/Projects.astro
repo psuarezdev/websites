@@ -1,20 +1,39 @@
 ---
-import GitHub from "./icons/GitHub.astro";
-import Nextjs from "./icons/Nextjs.astro";
-import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
+import GitHub from "./icons/GitHub.astro";
+
+import Nextjs from "./icons/Nextjs.astro";
+import Typescript from "./icons/Typescript.astro";
+import Tailwind from "./icons/Tailwind.astro";
 import LinkButton from "./LinkButton.astro";
+import Postgresql from "./icons/Postgresql.astro";
+import Prisma from "./icons/Prisma.astro";
 
 const TAGS = {
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#007ACC] text-white",
+    icon: Typescript,
+  },
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
     icon: Nextjs,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "TailwindCSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
+  },
+  PRISMA: {
+    name: "Prisma",
+    class: "bg-[#2D3748] text-white",
+    icon: Prisma,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#336791] text-white",
+    icon: Postgresql,
   },
 };
 
@@ -26,7 +45,13 @@ const PROJECTS = [
     link: "",
     github: "https://github.com/psuarezdev/discord-clone",
     image: "/projects/discord-clone.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PRISMA,
+      TAGS.POSTGRESQL,
+    ],
   },
 ];
 ---
@@ -57,11 +82,11 @@ const PROJECTS = [
             {title}
           </h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-row flex-wrap mb-2 gap-2">
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-1 rounded-full text-xs ${tag.class} py-1 px-2 `}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
