@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/Education.astro";
+import Projects from "../components/Projects.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Book from "../components/icons/Book.astro";
+import Cv from "../components/icons/Cv.astro";
+import ProfileCheck from "@/components/icons/ProfileCheck.astro";
+import AboutMe from "@/components/AboutMe.astro";
+import TechStack from "@/components/TechStack.astro";
+
+const caculateAge = (birthdate: string): number => {
+  const diff: number = new Date().getTime() - new Date(birthdate).getTime();
+  return Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+};
+---
+
+<Layout
+  title="Porfolio de psuarezdev - Desarrollador de Software y Técnico en Sistemas Informáticos"
+  description="Contrata a psuarezdev para crear tu aplicación web o móvil. Desarrollador de Software y Técnico en Sistemas Informáticos. Especializado en crear aplicaciones únicas."
+>
+  <main class="px-4">
+    <SectionContainer id="presentation" class="py-24 sm:py-44 pb-32">
+      <article class="flex items-center gap-3 mb-4">
+        <img
+          class="rounded-full size-12 transition-all duration-300 md:hover:scale-110"
+          src="/psuarezdev.webp"
+          alt="psuarezdev"
+        />
+        <Badge>
+          <a
+            href="https://www.linkedin.com/in/pablosuarezbm/"
+            target="_blank"
+            rel="noopener"
+            class="flex justify-center items-center"
+          >
+            Disponible para trabajar
+          </a>
+        </Badge>
+      </article>
+      <article>
+        <h1
+          class="text-gray-800 dark:text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:flex flex-col gap-x-4 pb-6 lg:pb-8"
+        >
+          Hey, soy Pablo Suárez
+          <span class="block text-[2rem] mt-1 text-gray-500">
+            Tengo {caculateAge("2003-11-15")} años
+          </span>
+        </h1>
+        <h2
+          class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+        >
+          <span class="text-yellow-200">Desarrollador de Software</span> y
+          <span class="text-yellow-200"> Técnico en Sistemas Informáticos</span>
+          de Gran Canaria, España 🇪🇸. Especializado en crear soluciones innovadoras.
+        </h2>
+      </article>
+      <nav class="flex justify-start flex-wrap gap-4 mt-8">
+        <SocialPill href="https://www.linkedin.com/in/pablosuarezbm/">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/psuarezdev">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="/curriculum.webp" download>
+          <Cv class="size-4 md:size-6" />
+          Curriculum
+        </SocialPill>
+        <SocialPill href="mailto:pablosuarezbm@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          pablosuarezbm@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-gray-800 dark:text-white"
+      >
+        <Briefcase class="size-7" /> Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="education">
+      <h2
+        class="text-3xl font-semibold mt-12 mb-6 flex gap-x-3 items-center text-gray-800 dark:text-white"
+      >
+        <Book class="size-7" /> Educación
+      </h2>
+      <Education />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2
+        class="flex items-center mt-12 mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="about-me">
+      <h2
+        class="flex items-center mt-12 mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+    <SectionContainer id="tecnologies">
+      <h2
+        class="flex items-center mt-12 mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Tecnologías
+      </h2>
+      <TechStack />
+    </SectionContainer>
+  </main>
+</Layout>

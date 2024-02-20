@@ -1,0 +1,209 @@
+---
+import StackItem from "./StackItem.astro";
+
+import Nextjs from "./icons/Nextjs.astro";
+import React from "./icons/React.astro";
+import Html from "./icons/Html.astro";
+import Css from "./icons/Css.astro";
+import Sass from "./icons/Sass.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Javascript from "./icons/JavaScript.astro";
+import Typescript from "./icons/TypeScript.astro";
+import Tailwind from "./icons/Tailwind.astro";
+
+import Nodejs from "./icons/Nodejs.astro";
+import Express from "./icons/Express.astro";
+import Nestjs from "./icons/Nestjs.astro";
+import Php from "./icons/Php.astro";
+import Laravel from "./icons/Laravel.astro";
+import MySql from "./icons/MySql.astro";
+import Postgresql from "./icons/Postgresql.astro";
+import Oracle from "./icons/Oracle.astro";
+import MongoDB from "./icons/Mongodb.astro";
+import Graphql from "./icons/Graphql.astro";
+import AstroBuild from "./icons/AstroBuild.astro";
+import Prisma from "./icons/Prisma.astro";
+import Sequelize from "./icons/Sequelize.astro";
+
+import Git from "./icons/Git.astro";
+import GitHub from "./icons/GitHub.astro";
+import Docker from "./icons/Docker.astro";
+import Vscode from "./icons/Vscode.astro";
+import Shell from "./icons/Shell.astro";
+import Npm from "./icons/Npm.astro";
+
+import Angular from "./icons/Angular.astro";
+import Netframework from "./icons/NetFramework.astro";
+import Kubernetes from "./icons/Kubernetes.astro";
+
+const frontend = [
+  {
+    name: "HTML5",
+    icon: Html,
+  },
+  {
+    name: "CSS3",
+    icon: Css,
+  },
+  {
+    name: "Sass",
+    icon: Sass,
+  },
+  {
+    name: "BootStrap5",
+    icon: Bootstrap,
+  },
+  {
+    name: "TailwindCSS",
+    icon: Tailwind,
+  },
+  {
+    name: "JavaScript",
+    icon: Javascript,
+  },
+  {
+    name: "TypeScript",
+    icon: Typescript,
+  },
+  {
+    name: "React.js",
+    icon: React,
+  },
+  {
+    name: "Next.js",
+    icon: Nextjs,
+  },
+  {
+    name: "Astro",
+    icon: AstroBuild,
+  },
+];
+
+const backend = [
+  {
+    name: "Node.js",
+    icon: Nodejs,
+  },
+  {
+    name: "Express.js",
+    icon: Express,
+  },
+  {
+    name: "Nest.js",
+    icon: Nestjs,
+  },
+  {
+    name: "PHP",
+    icon: Php,
+  },
+  {
+    name: "Laravel",
+    icon: Laravel,
+  },
+  {
+    name: "MySQL",
+    icon: MySql,
+  },
+  {
+    name: "PostgreSQL",
+    icon: Postgresql,
+  },
+  {
+    name: "OracleDB",
+    icon: Oracle,
+  },
+  {
+    name: "MongoDB",
+    icon: MongoDB,
+  },
+  {
+    name: "Prisma",
+    icon: Prisma,
+  },
+  {
+    name: "Sequelize",
+    icon: Sequelize,
+  },
+  {
+    name: "GraphQL",
+    icon: Graphql,
+  },
+];
+
+const tools = [
+  {
+    name: "VSCode",
+    icon: Vscode,
+  },
+  {
+    name: "Git",
+    icon: Git,
+  },
+  {
+    name: "GitHub",
+    icon: GitHub,
+  },
+  {
+    name: "Docker",
+    icon: Docker,
+  },
+  {
+    name: "Terminal",
+    icon: Shell,
+  },
+  {
+    name: "Npm",
+    icon: Npm,
+  },
+];
+
+const learning = [
+  {
+    name: "ASP.NET",
+    icon: Netframework,
+  },
+  {
+    name: "Angular",
+    icon: Angular,
+  },
+  {
+    name: "Kubernetes",
+    icon: Kubernetes,
+  },
+];
+---
+
+<section
+  class="lg:w-[740px] mx-auto grid lg:grid-cols-2 lg:grid-rows-2 gap-6 lg:place-content-center"
+>
+  <StackItem title="Front-End" skills={frontend} />
+  <StackItem title="Back-End" skills={backend} />
+  <StackItem title="Herramientas" skills={tools} />
+  <StackItem title="Aprendiendo" skills={learning} />
+
+  <script>
+    const gradientArticles = document.querySelectorAll(".gradient-article");
+
+    gradientArticles.forEach((gradientArticle) => {
+      const gradientDiv = gradientArticle.querySelector("div");
+
+      if (!gradientDiv) return;
+
+      gradientArticle.addEventListener("mousemove", (event) => {
+        const rect = gradientArticle.getBoundingClientRect();
+
+        const e = event as MouseEvent;
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        gradientDiv.style.opacity = "1";
+        gradientDiv.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(255, 182, 255, 0.1), transparent 40%)`;
+      });
+
+      gradientArticle.addEventListener("mouseleave", () => {
+        gradientDiv.style.opacity = "0";
+      });
+    });
+  </script>
+</section>

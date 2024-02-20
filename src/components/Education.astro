@@ -1,0 +1,28 @@
+---
+import EducationItem from "./EducationItem.astro";
+
+const EDUCATION = [
+  {
+    date: "Septiembre 2023 - Actualidad",
+    title: "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma",
+    school: "IES Lomo La Herradura",
+    link: "https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html"
+  },
+  {
+    date: "Septiembre 2021 - Junio 2023",
+    title: "Técnico en Sistemas Microinformáticos y Redes",
+    school: "IES Lomo La Herradura",
+    link: "https://todofp.es/que-estudiar/loe/informatica-comunicaciones/sistemas-microniformaticos-redes.html"
+  }
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EDUCATION.map((education) => (
+      <li>
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
+</ol>

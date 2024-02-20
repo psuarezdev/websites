@@ -1,0 +1,99 @@
+---
+import ThemeToggle from "./ThemeToggle.astro";
+
+const navItems = [
+  {
+    title: "Experiencia",
+    url: "/#experience",
+  },
+  {
+    title: "Educación",
+    url: "/#education",
+  },
+  {
+    title: "Proyectos",
+    url: "/#projects",
+  },
+  {
+    title: "Sobre mí",
+    url: "/#about-me",
+  },
+  {
+    title: "Contacto",
+    url: "mailto:pablosuarezbm@gmail.com",
+  },
+];
+---
+
+<header
+  class="z-10 backdrop-blur-md bg-dark-200/30 dark:bg-dark-900/30 fixed w-full b-20 top-0 left-0"
+>
+  <nav
+    class="flex px-3 py-4 text-xs sm:text-sm font-medium text-gray-600 dark:text-gray-200 justify-center items-center"
+  >
+    {
+      navItems.map(({ title, url }) => (
+        <a
+          class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+          aria-label={title.replace(" ", "-").toLowerCase()}
+          href={url}
+        >
+          {title}
+        </a>
+      ))
+    }
+    <ThemeToggle />
+  </nav>
+</header>
+
+<!-- <script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-yellow-500");
+            } else {
+              item.classList.remove("text-yellow-500");
+            }
+          });
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    });
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect();
+      }
+    };
+  });
+</script> -->
+
+<!-- <style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur bg-gray-300/60 dark:bg-gray-800/60 ring-white/10;
+    }
+  }
+</style> -->

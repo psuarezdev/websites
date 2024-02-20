@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  {
+    date: "Mayo 2023 - Septiembre 2023 (5 meses)",
+    title: "Desarrollador Web y Administrador de Sistemas",
+    company: "Suisca Group Projects & Services",
+    description:
+      "Diseño y desarrollo de aplicaciones web utilizando tecnologías como HTML5, CSS3, BootStrap5, TailwindCSS, JS, PHP y Laravel. Gestión de bases de datos Oracle 11g. Mantenimiento y administración de equipos, servidores y redes. Mantenimiento de software ERP, asegurando su funcionalidad y rendimiento.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li>
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
