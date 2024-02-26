@@ -185,6 +185,7 @@ const learning = [
   <StackItem title="Aprendiendo" skills={learning} />
 
   <script>
+    
     const gradientArticles = document.querySelectorAll(".gradient-article");
 
     gradientArticles.forEach((gradientArticle) => {
@@ -201,7 +202,7 @@ const learning = [
         const y = e.clientY - rect.top;
 
         gradientDiv.style.opacity = "1";
-        gradientDiv.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(255, 182, 255, 0.1), transparent 40%)`;
+        gradientDiv.style.background = `radial-gradient(600px at ${x}px ${y}px, var(--gradient-article--bg--color), transparent 40%)`;
       });
 
       gradientArticle.addEventListener("mouseleave", () => {

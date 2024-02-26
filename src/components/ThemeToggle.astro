@@ -91,6 +91,10 @@ const THEMES = ["Light", "Dark", "System"];
 
     updateIcon(themePreference);
     document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+    document.documentElement.style.setProperty(
+      '--gradient-article--bg--color',
+      isDark ? 'rgba(255, 182, 255, 0.1)' : 'rgba(69, 65, 69, 0.1)'
+    );
   };
 
   updateTheme();
