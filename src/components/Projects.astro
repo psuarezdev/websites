@@ -3,11 +3,14 @@ import Link from "./icons/Link.astro";
 import GitHub from "./icons/GitHub.astro";
 
 import Nextjs from "./icons/Nextjs.astro";
+import Reactjs from "./icons/React.astro";
+import Nestjs from "./icons/Nestjs.astro";
 import Typescript from "./icons/Typescript.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import LinkButton from "./LinkButton.astro";
 import Postgresql from "./icons/Postgresql.astro";
 import Prisma from "./icons/Prisma.astro";
+import MongoDB from "./icons/Mongodb.astro";
 
 const TAGS = {
   TYPESCRIPT: {
@@ -19,6 +22,16 @@ const TAGS = {
     name: "Next.js",
     class: "bg-black text-white",
     icon: Nextjs,
+  },
+  REACT: {
+    name: "React.js",
+    class: "bg-[#00D8FF] text-white",
+    icon: Reactjs,
+  },
+  NEST: {
+    name: "Nest.js",
+    class: "bg-[#E0234E] text-white",
+    icon: Nestjs,
   },
   TAILWIND: {
     name: "TailwindCSS",
@@ -34,6 +47,11 @@ const TAGS = {
     name: "PostgreSQL",
     class: "bg-[#336791] text-white",
     icon: Postgresql,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-[#47B548] text-white",
+    icon: MongoDB,
   },
 };
 
@@ -51,6 +69,22 @@ const PROJECTS = [
       TAGS.TAILWIND,
       TAGS.PRISMA,
       TAGS.POSTGRESQL,
+    ],
+  },
+  {
+    title: "Clon de Airbnb",
+    description:
+      "Clon Fullstack de Airbnb: React.js, Nest,js, TypeScript, MongoDB, Prisma, Tailwind",
+    link: "",
+    github: "https://github.com/psuarezdev/airbnb-clone",
+    image: "/projects/airbnb-clone.png",
+    tags: [
+      TAGS.REACT,
+      TAGS.NEST,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PRISMA,
+      TAGS.MONGODB,
     ],
   },
 ];
