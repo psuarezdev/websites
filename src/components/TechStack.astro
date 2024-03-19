@@ -17,6 +17,7 @@ import Nestjs from "./icons/Nestjs.astro";
 import Php from "./icons/Php.astro";
 import Laravel from "./icons/Laravel.astro";
 import MySql from "./icons/MySql.astro";
+import Mariadb from "./icons/Mariadb.astro";
 import Postgresql from "./icons/Postgresql.astro";
 import Oracle from "./icons/Oracle.astro";
 import MongoDB from "./icons/Mongodb.astro";
@@ -25,16 +26,24 @@ import AstroBuild from "./icons/AstroBuild.astro";
 import Prisma from "./icons/Prisma.astro";
 import Sequelize from "./icons/Sequelize.astro";
 
+import Vscode from "./icons/Vscode.astro";
+import IntelliJ from "./icons/IntelliJ.astro";
+import Androidstudio from "./icons/AndroidStudio.astro";
 import Git from "./icons/Git.astro";
 import GitHub from "./icons/GitHub.astro";
 import Docker from "./icons/Docker.astro";
-import Vscode from "./icons/Vscode.astro";
 import Shell from "./icons/Shell.astro";
 import Npm from "./icons/Npm.astro";
+import Postman from "./icons/Postman.astro";
+import Expo from "./icons/Expo.astro";
+
+import Ionic from "./icons/Ionic.astro";
+import Flutter from "./icons/Flutter.astro";
 
 import Angular from "./icons/Angular.astro";
 import Netframework from "./icons/NetFramework.astro";
 import Kubernetes from "./icons/Kubernetes.astro";
+import Mail from "./icons/Mail.astro";
 
 const frontend = [
   {
@@ -105,8 +114,27 @@ const backend = [
     icon: Laravel,
   },
   {
+    name: "Prisma",
+    icon: Prisma,
+  },
+  {
+    name: "Sequelize",
+    icon: Sequelize,
+  },
+  {
+    name: "GraphQL",
+    icon: Graphql,
+  },
+];
+
+const databases = [
+  {
     name: "MySQL",
     icon: MySql,
+  },
+  {
+    name: "MariaDB",
+    icon: Mariadb,
   },
   {
     name: "PostgreSQL",
@@ -121,17 +149,17 @@ const backend = [
     name: "MongoDB",
     icon: MongoDB,
   },
+];
+
+const mobile = [
   {
-    name: "Prisma",
-    icon: Prisma,
+    name: "React Native",
+    icon: React,
+    class: "text-[#00D8FF]",
   },
   {
-    name: "Sequelize",
-    icon: Sequelize,
-  },
-  {
-    name: "GraphQL",
-    icon: Graphql,
+    name: "Ionic",
+    icon: Ionic,
   },
 ];
 
@@ -139,6 +167,14 @@ const tools = [
   {
     name: "VSCode",
     icon: Vscode,
+  },
+  {
+    name: "IntelliJ",
+    icon: IntelliJ,
+  },
+  {
+    name: "Android Studio",
+    icon: Androidstudio,
   },
   {
     name: "Git",
@@ -160,16 +196,28 @@ const tools = [
     name: "Npm",
     icon: Npm,
   },
+  {
+    name: "Postman",
+    icon: Postman,
+  },
+  {
+    name: "Expo",
+    icon: Expo,
+  },
 ];
 
 const learning = [
   {
-    name: "ASP.NET",
-    icon: Netframework,
+    name: "Flutter",
+    icon: Flutter,
   },
   {
     name: "Angular",
     icon: Angular,
+  },
+  {
+    name: "ASP.NET",
+    icon: Netframework,
   },
   {
     name: "Kubernetes",
@@ -179,37 +227,42 @@ const learning = [
 ---
 
 <section
-  class="lg:w-[740px] mx-auto grid lg:grid-cols-2 lg:grid-rows-2 gap-6 lg:place-content-center"
+  class="mx-auto grid lg:grid-cols-3 lg:grid-rows-1 gap-6 lg:place-content-center mb-6"
 >
   <StackItem title="Front-End" skills={frontend} />
   <StackItem title="Back-End" skills={backend} />
-  <StackItem title="Herramientas" skills={tools} />
-  <StackItem title="Aprendiendo" skills={learning} />
-
-  <script>
-    
-    const gradientArticles = document.querySelectorAll(".gradient-article");
-
-    gradientArticles.forEach((gradientArticle) => {
-      const gradientDiv = gradientArticle.querySelector("div");
-
-      if (!gradientDiv) return;
-
-      gradientArticle.addEventListener("mousemove", (event) => {
-        const rect = gradientArticle.getBoundingClientRect();
-
-        const e = event as MouseEvent;
-
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        gradientDiv.style.opacity = "1";
-        gradientDiv.style.background = `radial-gradient(600px at ${x}px ${y}px, var(--gradient-article--bg--color), transparent 40%)`;
-      });
-
-      gradientArticle.addEventListener("mouseleave", () => {
-        gradientDiv.style.opacity = "0";
-      });
-    });
-  </script>
+  <StackItem title="Databases" skills={databases} />
 </section>
+<section
+  class="mx-auto grid lg:grid-cols-3 lg:grid-rows-1 gap-6 lg:place-content-center"
+>
+  <StackItem title="Mobile" skills={mobile} />
+  <StackItem title="Herramientas" skills={tools} />
+  <StackItem title="Por aprender" skills={learning} />
+</section>
+
+<script>
+  const gradientArticles = document.querySelectorAll(".gradient-article");
+
+  gradientArticles.forEach((gradientArticle) => {
+    const gradientDiv = gradientArticle.querySelector("div");
+
+    if (!gradientDiv) return;
+
+    gradientArticle.addEventListener("mousemove", (event) => {
+      const rect = gradientArticle.getBoundingClientRect();
+
+      const e = event as MouseEvent;
+
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      gradientDiv.style.opacity = "1";
+      gradientDiv.style.background = `radial-gradient(600px at ${x}px ${y}px, var(--gradient-article--bg--color), transparent 40%)`;
+    });
+
+    gradientArticle.addEventListener("mouseleave", () => {
+      gradientDiv.style.opacity = "0";
+    });
+  });
+</script>
