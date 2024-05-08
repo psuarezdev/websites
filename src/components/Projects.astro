@@ -57,6 +57,17 @@ const TAGS = {
 
 const PROJECTS = [
   {
+    title: "LoMobility",
+    description: "Innovadora iniciativa que busca empoderar a los ciudadanos para mejorar la accesibilidad en entornos urbanos",
+    link: "http://herraduramasproquo.com/lomobility",
+    image: "/projects/lomobility.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND
+    ],
+  },
+  {
     title: "Clon de Discord",
     description:
       "Clon Fullstack de Discord: Next.js 14, TypeScript, PostgreSQL, Socket.io, Prisma, Tailwind",
@@ -90,7 +101,7 @@ const PROJECTS = [
   {
     title: "Clon de Reddit",
     description:
-      "Clon Fullstack de Reddit: Next.js 14, TypeScript, PostgreSQL, TanStack Query, Prisma, Tailwind, Redis, Uploadthing",
+      "Clon Fullstack de Reddit: Next.js 14, TypeScript, PostgreSQL, TanStack Query, Prisma, Tailwind, Redis",
     link: "",
     github: "https://github.com/psuarezdev/reddit-clone",
     image: "/projects/reddit-clone.webp",
@@ -110,7 +121,7 @@ const PROJECTS = [
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
         <div class="w-full md:w-1/2">
-          <div class=" relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl rounded-xl sm:rounded-xl md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl rounded-xl sm:rounded-xl md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
               class="object-cover object-top w-full h-56 transition duration-500 rounded-lg sm:h-full md:scale-105
               hover:md:scale-110"
