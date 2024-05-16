@@ -1,16 +1,17 @@
 ---
 import StackItem from "./StackItem.astro";
 
-import Nextjs from "./icons/Nextjs.astro";
-import React from "./icons/React.astro";
-import Angular from "./icons/Angular.astro";
 import Html from "./icons/Html.astro";
 import Css from "./icons/Css.astro";
 import Sass from "./icons/Sass.astro";
 import Bootstrap from "./icons/Bootstrap.astro";
+import Tailwind from "./icons/Tailwind.astro";
 import Javascript from "./icons/JavaScript.astro";
 import Typescript from "./icons/Typescript.astro";
-import Tailwind from "./icons/Tailwind.astro";
+import Nextjs from "./icons/Nextjs.astro";
+import React from "./icons/React.astro";
+import Angular from "./icons/Angular.astro";
+import AstroBuild from "./icons/AstroBuild.astro";
 
 import Nodejs from "./icons/Nodejs.astro";
 import Express from "./icons/Express.astro";
@@ -19,15 +20,19 @@ import Python from "./icons/Python.astro";
 import Django from "./icons/Django.astro";
 import Php from "./icons/Php.astro";
 import Laravel from "./icons/Laravel.astro";
+import Graphql from "./icons/Graphql.astro";
+import Prisma from "./icons/Prisma.astro";
+import Sequelize from "./icons/Sequelize.astro";
+
 import MySql from "./icons/MySql.astro";
 import Mariadb from "./icons/Mariadb.astro";
 import Postgresql from "./icons/Postgresql.astro";
 import Oracle from "./icons/Oracle.astro";
 import MongoDB from "./icons/Mongodb.astro";
-import Graphql from "./icons/Graphql.astro";
-import AstroBuild from "./icons/AstroBuild.astro";
-import Prisma from "./icons/Prisma.astro";
-import Sequelize from "./icons/Sequelize.astro";
+
+import Flutter from "./icons/Flutter.astro";
+import Electron from "./icons/Electron.astro";
+import Ionic from "./icons/Ionic.astro";
 
 import Vscode from "./icons/Vscode.astro";
 import IntelliJ from "./icons/IntelliJ.astro";
@@ -39,11 +44,7 @@ import Shell from "./icons/Shell.astro";
 import Npm from "./icons/Npm.astro";
 import Postman from "./icons/Postman.astro";
 
-import Ionic from "./icons/Ionic.astro";
-import Flutter from "./icons/Flutter.astro";
-
-import Netframework from "./icons/NetFramework.astro";
-import Kubernetes from "./icons/Kubernetes.astro";
+// import Netframework from "./icons/NetFramework.astro";
 
 const frontend = [
   {
@@ -163,15 +164,19 @@ const databases = [
   },
 ];
 
-const mobile = [
+const mobileAndDesktop = [
   {
-    name: "React Native",
+    name: "Flutter",
+    icon: Flutter,
+  },
+  {
+    name: "R. Native",
     icon: React,
     class: "text-[#00D8FF]",
   },
   {
-    name: "Angular",
-    icon: Angular,
+    name: "Electron",
+    icon: Electron,
   },
   {
     name: "Ionic",
@@ -217,36 +222,20 @@ const tools = [
     icon: Postman,
   },
 ];
-
-const learning = [
-  {
-    name: "Flutter",
-    icon: Flutter,
-  },
-  {
-    name: ".NET",
-    icon: Netframework,
-  },
-  {
-    name: "Kubernetes",
-    icon: Kubernetes,
-  },
-];
 ---
 
 <section
-  class="mx-auto grid lg:grid-cols-3 lg:grid-rows-1 gap-6 lg:place-content-center mb-6"
+  class="mx-auto grid lg:grid-cols-2 lg:grid-rows-1 gap-6 lg:place-content-center mb-6"
 >
   <StackItem title="Front-End" skills={frontend} />
   <StackItem title="Back-End" skills={backend} />
-  <StackItem title="Databases" skills={databases} />
 </section>
 <section
   class="mx-auto grid lg:grid-cols-3 lg:grid-rows-1 gap-6 lg:place-content-center"
 >
-  <StackItem title="Mobile" skills={mobile} />
+  <StackItem title="Mobile & Desktop" skills={mobileAndDesktop} />
+  <StackItem title="Databases" skills={databases} />
   <StackItem title="Herramientas" skills={tools} />
-  <StackItem title="Por aprender" skills={learning} />
 </section>
 
 <script>
