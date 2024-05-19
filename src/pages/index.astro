@@ -18,7 +18,7 @@ import AboutMe from "@/components/AboutMe.astro";
 import TechStack from "@/components/TechStack.astro";
 import Technology from "@/components/icons/Technology.astro";
 
-const caculateAge = (birthdate: string): number => {
+function caculateAge(birthdate: string) {
   const diff: number = new Date().getTime() - new Date(birthdate).getTime();
   return Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
 };
@@ -30,7 +30,7 @@ const caculateAge = (birthdate: string): number => {
 >
   <main class="px-4">
     <SectionContainer id="presentation" class="py-24 sm:py-44 pb-32">
-      <article class="flex items-center gap-3 mb-4">
+      <article class="flex items-center gap-3 mb-4 py-1">
         <img
           class="rounded-full size-12 transition-all duration-300 md:hover:scale-110"
           src="/psuarezdev.webp"
