@@ -3,7 +3,7 @@ import SunIcon from "./icons/Sun.astro";
 import MoonIcon from "./icons/Moon.astro";
 import SystemIcon from "./icons/System.astro";
 
-const THEMES = ["Light", "Dark", "System"];
+const THEMES = ["Light", "Dark"]; // "System"
 ---
 
 <div class="relative ml-1 mr-1">
@@ -62,7 +62,7 @@ const THEMES = ["Light", "Dark", "System"];
 
   const getThemePreference = () => {
     if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("theme") ?? "system";
+      return localStorage.getItem("theme") ?? "dark" //"system";
     }
     return window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"

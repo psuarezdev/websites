@@ -5,7 +5,7 @@ interface Props {
   title: string;
   school: string;
   link: string;
-  date: string;
+  date?: string;
 }
 
 const { title, school, link, date } = Astro.props;
@@ -23,9 +23,11 @@ const { title, school, link, date } = Astro.props;
       <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
         {school}
       </h4>
-      <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
-        {date}
-      </time>
+      {date && (
+        <span class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
+          {date}
+        </span>
+      )}
     </div>
     {
       link && (
