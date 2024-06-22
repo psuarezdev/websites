@@ -4,11 +4,12 @@ import LinkInline from "./LinkInline.astro";
 interface Props {
   title: string;
   school: string;
-  link: string;
   date?: string;
+  average?: string;
+  link: string;
 }
 
-const { title, school, link, date } = Astro.props;
+const { title, school, date, average, link } = Astro.props;
 ---
 
 <div
@@ -23,11 +24,16 @@ const { title, school, link, date } = Astro.props;
       <h4 class="font-semibold text-xl text-gray-600 dark:text-white">
         {school}
       </h4>
-      {date && (
-        <span class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
-          {date}
-        </span>
-      )}
+        {date && (
+          <p class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
+            {date}
+          </p>
+        )}
+        {average && (
+          <p class="mt-2 text-lg font-bold text-gray-700 dark:text-gray-300">
+            Nota media: {average}
+          </p>
+        )}
     </div>
     {
       link && (
