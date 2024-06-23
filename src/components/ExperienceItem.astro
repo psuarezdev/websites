@@ -13,10 +13,10 @@ const { title, company, description, link, date } = Astro.props;
 ---
 
 <div
-  class=" relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+  class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
 >
-  <div class="relative pb-12 md:col-span-2">
-    <div class="sticky top-0">
+  <div class="relative pb-12 col-span-12">
+    <div class="sticky top-0 mb-2">
       <span class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl">
         &bull;
       </span>
@@ -28,34 +28,34 @@ const { title, company, description, link, date } = Astro.props;
         {date}
       </time>
     </div>
-  </div>
-  <div
-    class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
-  >
-    {description}
-    {
-      link && (
-        <LinkInline href={link}>
-          Saber más{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 icon icon-tabler icon-tabler-chevron-right"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <>
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 6l6 6l-6 6" />
-            </>
-          </svg>
-        </LinkInline>
-      )
-    }
+    <div
+      class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
+    >
+      {description}
+      {
+        link && (
+          <LinkInline href={link}>
+            Saber más{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 icon icon-tabler icon-tabler-chevron-right"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <>
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 6l6 6l-6 6" />
+              </>
+            </svg>
+          </LinkInline>
+        )
+      }
+    </div>
   </div>
 </div>
