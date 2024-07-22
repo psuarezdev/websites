@@ -1,9 +1,6 @@
 ---
 import StackItem from "./StackItem.astro";
 
-import Html from "./icons/Html.astro";
-import Css from "./icons/Css.astro";
-import Sass from "./icons/Sass.astro";
 import Bootstrap from "./icons/Bootstrap.astro";
 import Tailwind from "./icons/Tailwind.astro";
 import Javascript from "./icons/JavaScript.astro";
@@ -20,15 +17,9 @@ import Nestjs from "./icons/Nestjs.astro";
 import Netframework from "./icons/NetFramework.astro";
 import Csharp from "./icons/Csharp.astro";
 import Kotlin from "./icons/Kotlin.astro";
-// import Java from "./icons/Java.astro";
-// import Python from "./icons/Python.astro";
-// import Django from "./icons/Django.astro";
 import Php from "./icons/Php.astro";
 import Laravel from "./icons/Laravel.astro";
 import Spring from "./icons/Spring.astro";
-import Graphql from "./icons/Graphql.astro";
-// import Prisma from "./icons/Prisma.astro";
-// import Sequelize from "./icons/Sequelize.astro";
 
 import MySql from "./icons/MySql.astro";
 import Mariadb from "./icons/Mariadb.astro";
@@ -42,40 +33,7 @@ import Tauri from "./icons/Tauri.astro";
 import Electron from "./icons/Electron.astro";
 import Ionic from "./icons/Ionic.astro";
 
-import Vscode from "./icons/Vscode.astro";
-// import PyCharm from "./icons/Pycharm.astro";
-import IntelliJ from "./icons/IntelliJ.astro";
-import VisualStudio from "./icons/VisualStudio.astro";
-import Androidstudio from "./icons/AndroidStudio.astro";
-import Git from "./icons/Git.astro";
-import GitHub from "./icons/GitHub.astro";
-import Docker from "./icons/Docker.astro";
-// import Shell from "./icons/Shell.astro";
-// import Npm from "./icons/Npm.astro";
-import Swagger from "./icons/Swagger.astro";
-import Postman from "./icons/Postman.astro";
-
 const frontend = [
-  {
-    name: "HTML5",
-    icon: Html,
-  },
-  {
-    name: "CSS3",
-    icon: Css,
-  },
-  {
-    name: "Sass",
-    icon: Sass,
-  },
-  {
-    name: "BootStrap5",
-    icon: Bootstrap,
-  },
-  {
-    name: "TailwindCSS",
-    icon: Tailwind,
-  },
   {
     name: "JavaScript",
     icon: Javascript,
@@ -102,6 +60,14 @@ const frontend = [
     name: "Astro",
     icon: AstroBuild,
   },
+  {
+    name: "BootStrap5",
+    icon: Bootstrap,
+  },
+  {
+    name: "TailwindCSS",
+    icon: Tailwind,
+  },
 ];
 
 const backend = [
@@ -124,7 +90,7 @@ const backend = [
     icon: Csharp,
   },
   {
-    name: "ASP.NET",
+    name: "ASP.NET Core",
     icon: Netframework,
   },
   {
@@ -143,41 +109,9 @@ const backend = [
     name: "Laravel",
     icon: Laravel,
   },
-  {
-    name: "GraphQL",
-    icon: Graphql,
-  },
 ];
 
-const databases = [
-  {
-    name: "MySQL",
-    icon: MySql,
-  },
-  {
-    name: "MariaDB",
-    icon: Mariadb,
-  },
-  {
-    name: "PostgreSQL",
-    class: "text-[#336791]",
-    icon: Postgresql,
-  },
-  {
-    name: "OracleDB",
-    icon: Oracle,
-  },
-  {
-    name: "SQL Server",
-    icon: SQLServer,
-  },
-  {
-    name: "MongoDB",
-    icon: MongoDB,
-  },
-];
-
-const mobileAndDesktop = [
+const crossPlatform = [
   {
     name: "Flutter",
     icon: Flutter,
@@ -192,67 +126,55 @@ const mobileAndDesktop = [
     icon: Tauri,
   },
   {
+    name: "Ionic",
+    icon: Ionic,
+  },
+  {
     name: "Electron",
     icon: Electron,
   },
-  {
-    name: "Ionic",
-    icon: Ionic,
-  }
 ];
 
-const tools = [
+const databases = [
   {
-    name: "VSCode",
-    icon: Vscode,
+    name: "PostgreSQL",
+    class: "text-[#336791]",
+    icon: Postgresql,
   },
   {
-    name: "Visual Studio",
-    icon: VisualStudio,
+    name: "OracleDB",
+    icon: Oracle,
   },
   {
-    name: "Android Studio",
-    icon: Androidstudio,
+    name: "SQLServer",
+    icon: SQLServer,
   },
   {
-    name: "IntelliJ",
-    icon: IntelliJ,
+    name: "MySQL",
+    icon: MySql,
   },
   {
-    name: "Git",
-    icon: Git,
+    name: "MariaDB",
+    icon: Mariadb,
   },
   {
-    name: "GitHub",
-    icon: GitHub,
-  },
-  {
-    name: "Docker",
-    icon: Docker,
-  },
-  {
-    name: "Swagger",
-    icon: Swagger,
-  },
-  {
-    name: "Postman",
-    icon: Postman,
+    name: "MongoDB",
+    icon: MongoDB,
   },
 ];
 ---
 
 <section
-  class="mx-auto grid lg:grid-cols-2 lg:grid-rows-1 gap-6 lg:place-content-center mb-6"
+  class="grid lg:grid-cols-3 lg:grid-rows-1 lg:place-content-center gap-6 mx-auto mb-6"
 >
   <StackItem title="Front-End" skills={frontend} />
   <StackItem title="Back-End" skills={backend} />
+  <StackItem title="Multiplataforma" skills={crossPlatform} />
 </section>
 <section
-  class="mx-auto grid lg:grid-cols-3 lg:grid-rows-1 gap-6 lg:place-content-center"
+  class="grid lg:grid-cols-1 lg:grid-rows-1 lg:place-content-center gap-6 mx-auto mb-6"
 >
-  <StackItem title="Mobile & Desktop" skills={mobileAndDesktop} />
-  <StackItem title="Databases" skills={databases} />
-  <StackItem title="Herramientas" skills={tools} />
+  <StackItem title="Bases de datos" skillsClass="flex items-center justify-evenly" skills={databases} />
 </section>
 
 <script>

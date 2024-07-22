@@ -1,6 +1,7 @@
 ---
 interface Props {
   title: string;
+  skillsClass?: string;
   skills: {
     name: string;
     class?: string;
@@ -8,7 +9,7 @@ interface Props {
   }[];
 }
 
-const { title, skills } = Astro.props;
+const { title, skills, skillsClass } = Astro.props;
 ---
 
 <article
@@ -20,14 +21,14 @@ const { title, skills } = Astro.props;
   >
   </div>
   <h3
-    class="text-center mb-8 text-xl font-bold lg:text-4xl lg:break-words bg-gradient-to-t text-yellow-500 bg-clip-text text-transparent"
+    class="text-center mb-8 text-xl font-bold lg:text-3xl lg:break-words bg-gradient-to-t text-yellow-500 bg-clip-text text-transparent"
   >
     {title}
   </h3>
-  <ul class="grid grid-cols-3 gap-4">
+  <ul class={skillsClass ?? 'grid grid-cols-3 gap-4'}>
     {
       skills.map((skill) => (
-        <li class="rounded-2xl group flex flex-col fle justify-center items-center">
+        <li class="group flex flex-col items-center justify-center rounded-2xl">
           <skill.icon class={`size-8 lg:size-10 ${skill?.class}`} />
           <span class="text-sm w-full text-center">{skill.name}</span>
         </li>
