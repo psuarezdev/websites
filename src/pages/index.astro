@@ -1,4 +1,5 @@
 ---
+import { calculateAge } from "@/lib/utils";
 import Layout from "@/layouts/Layout.astro";
 import Badge from "@/components/Badge.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
@@ -20,10 +21,6 @@ import Technology from "@/components/icons/Technology.astro";
 import Certificates from "@/components/Certificates.astro";
 import Certificate from "@/components/icons/Certificate.astro";
 
-function caculateAge(birthdate: string) {
-  const diff: number = new Date().getTime() - new Date(birthdate).getTime();
-  return Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
-};
 ---
 
 <Layout
@@ -55,15 +52,16 @@ function caculateAge(birthdate: string) {
         >
           Hey, soy Pablo Suárez
           <span class="block text-[2rem] mt-1 text-gray-500">
-            Tengo {caculateAge("2003-11-15")} años
+            Tengo {calculateAge("2003-11-15")} años
           </span>
         </h1>
         <h2
           class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
         >
-          <span class="text-yellow-500 dark:text-yellow-200">Desarrollador de Aplicaciones Multiplataforma</span> y
-          <span class="text-yellow-500 dark:text-yellow-200"> Técnico en Sistemas Informáticos</span>
-          de Gran Canaria, España 🇪🇸. Especializado en crear soluciones innovadoras.
+          <span class="text-yellow-500 dark:text-yellow-200">Desarrollador de Software</span> y
+          <span class="text-yellow-500 dark:text-yellow-200"> Técnico en Informático</span>
+          de Gran Canaria, España 🇪🇸.<br /> 
+          Especializado en crear soluciones innovadoras que abordan necesidades tecnológicas actuales.
         </h2>
       </article>
       <nav class="flex justify-start flex-wrap gap-4 mt-8">

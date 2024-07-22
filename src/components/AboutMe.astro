@@ -1,3 +1,7 @@
+---
+import { calculateAge } from "@/lib/utils";
+---
+
 <article
   class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
 >
@@ -5,30 +9,50 @@
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Me llamo Pablo Suárez pero mis amigos me llaman torito. Empecé en la
-      programación cuando tenía 16 años. Actualmente estoy 
+      Me llamo Pablo Suárez, aunque mis amigos me llaman Torito. Tengo {calculateAge("2003-11-15")} años y 
+      llevo inmerso en el mundo de la informática desde que tenía 15 años. Mi <strong>curiosidad y pasión por la 
+        tecnología</strong> me han impulsado a explorar diversas áreas, adaptándome rápidamente a nuevos entornos 
+      tecnológicos y aprendiendo nuevas habilidades.
+    </p>
+    
+    <p>
+      Soy un apasionado del desarrollo de software multiplataforma (web, móvil y escritorio), con un amplio 
+      conocimiento en <strong><a href="#technologies" class="hover:underline">tecnologías</a></strong> 
+      y una sólida <strong><a href="#education" class="hover:underline">formación académica</a></strong>.
+      Actualmente, estoy en
       <strong>
-        estudiando el 
-        <a href="https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html" target="_blank">
-          CFGS DAM
+        <a href="https://www.linkedin.com/in/pablosuarezbm/" target="_blank" class="hover:underline">
+          búsqueda activa de empleo
         </a>
       </strong>
-      a la par que <strong>desarrollo proyectos personales</strong>. 
+      mientras desarrollo <strong><a href="#projects" class="hover:underline">proyectos personales</a></strong>.
     </p>
 
     <p>
-      Apasionado profesional de la informática con un firme <strong>compromiso</strong> por el <strong>aprendizaje continuo</strong>. 
-      Sobresalgo en la <strong>colaboración</strong> efectiva dentro de <strong>equipos</strong> multidisciplinarios, centrándome en 
-      proporcionar soluciones innovadoras y eficientes. Mi dedicación a la excelencia se refleja en 
-      mi <strong>constante búsqueda de buenas prácticas</strong> y mi mantenimiento actualizado en las tendencias de la industria.
+      Durante estos años, he tenido la oportunidad de participar en diversos proyectos y obtener varias 
+      <strong>certificaciones</strong>. También he participado en eventos como las 
+      <strong>
+        <a href="https://canariasskills.com/ediciones-anteriores/edicion-2023/" target="_blank" class="hover:underline">
+          Canarias Skills 2023
+        </a>
+      </strong> 
+      y la 
+      <strong>
+        <a href="https://www.eii.ulpgc.es/es/I-Edicion-OILP-2023/" target="_blank" class="hover:underline">
+          1ª Olimpiada Informática en la ULPGC
+        </a>
+      </strong>.
     </p>
 
     <p>
-      Recientemente me he visto en la necesidad de renunciar a mi anterior puesto de trabajo como
-      <strong>Desarrollador Web y Administrador de Sistemas</strong>
-      debido a la incompatibilidad de horarios con mis estudios.
+      Recientemente, renuncié a mi anterior puesto de trabajo como 
+      <strong>Desarrollador Web y Administrador de Sistemas</strong> 
+      debido a la incompatibilidad de horarios con mis estudios. 
+      Esta decisión me ha permitido centrarme en terminar mi formación y seguir creciendo profesionalmente.
     </p>
   </div>
+
+
 
   <img
     width="200"
