@@ -138,27 +138,32 @@ const crossPlatform = [
 const databases = [
   {
     name: "PostgreSQL",
-    class: "text-[#336791]",
+    class: "size-9 lg:size-12 text-[#336791]",
     icon: Postgresql,
   },
   {
-    name: "OracleDB",
+    name: "Oracle Database",
+    class: "size-9 lg:size-12",
     icon: Oracle,
   },
   {
-    name: "SQLServer",
+    name: "SQL Server",
+    class: "size-9 lg:size-12",
     icon: SQLServer,
   },
   {
     name: "MySQL",
+    class: "size-9 lg:size-12",
     icon: MySql,
   },
   {
     name: "MariaDB",
+    class: "size-9 lg:size-12",
     icon: Mariadb,
   },
   {
     name: "MongoDB",
+    class: "size-9 lg:size-12",
     icon: MongoDB,
   },
 ];
@@ -174,7 +179,8 @@ const databases = [
 <section
   class="grid lg:grid-cols-1 lg:grid-rows-1 lg:place-content-center gap-6 mx-auto mb-6"
 >
-  <StackItem title="Bases de datos" skillsClass="flex items-center justify-evenly" skills={databases} />
+  <StackItem class="hidden md:block" title="Bases de datos" skillsClass="flex items-center justify-evenly" skills={databases} />
+  <StackItem class="md:hidden" title="Bases de datos" skills={databases} />
 </section>
 
 <script>
