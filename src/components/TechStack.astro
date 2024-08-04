@@ -1,25 +1,23 @@
 ---
 import StackItem from "./StackItem.astro";
 
-import Bootstrap from "./icons/Bootstrap.astro";
-import Tailwind from "./icons/Tailwind.astro";
 import Javascript from "./icons/JavaScript.astro";
 import Typescript from "./icons/Typescript.astro";
 import Nextjs from "./icons/Nextjs.astro";
 import React from "./icons/React.astro";
 import Angular from "./icons/Angular.astro";
 import AstroBuild from "./icons/AstroBuild.astro";
+import Jquery from "./icons/Jquery.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Tailwind from "./icons/Tailwind.astro";
 
-import Nodejs from "./icons/Nodejs.astro";
 import Express from "./icons/Express.astro";
 import Nestjs from "./icons/Nestjs.astro";
-
 import Netframework from "./icons/NetFramework.astro";
-import Csharp from "./icons/Csharp.astro";
-import Kotlin from "./icons/Kotlin.astro";
-import Php from "./icons/Php.astro";
+import Django from "./icons/Django.astro";
 import Laravel from "./icons/Laravel.astro";
 import Spring from "./icons/Spring.astro";
+import Graphql from "./icons/Graphql.astro";
 
 import MySql from "./icons/MySql.astro";
 import Mariadb from "./icons/Mariadb.astro";
@@ -29,9 +27,10 @@ import SQLServer from "./icons/SQLServer.astro";
 import MongoDB from "./icons/Mongodb.astro";
 
 import Flutter from "./icons/Flutter.astro";
+import Ionic from "./icons/Ionic.astro";
+import Kotlin from "./icons/Kotlin.astro";
 import Tauri from "./icons/Tauri.astro";
 import Electron from "./icons/Electron.astro";
-import Ionic from "./icons/Ionic.astro";
 
 const frontend = [
   {
@@ -61,20 +60,20 @@ const frontend = [
     icon: AstroBuild,
   },
   {
-    name: "BootStrap5",
+    name: "jQuery",
+    icon: Jquery,
+  },
+  {
+    name: "BootStrap",
     icon: Bootstrap,
   },
   {
-    name: "TailwindCSS",
+    name: "Tailwind",
     icon: Tailwind,
   },
 ];
 
 const backend = [
-  {
-    name: "Node.js",
-    icon: Nodejs,
-  },
   {
     name: "Express.js",
     class: "text-[#000]",
@@ -86,28 +85,24 @@ const backend = [
     icon: Nestjs,
   },
   {
-    name: "C#",
-    icon: Csharp,
-  },
-  {
     name: "ASP.NET Core",
     icon: Netframework,
   },
   {
-    name: "Kotlin",
-    icon: Kotlin,
+    name: "Django",
+    icon: Django,
+  },
+  {
+    name: "Laravel",
+    icon: Laravel,
   },
   {
     name: "Spring Boot",
     icon: Spring,
   },
   {
-    name: "PHP",
-    icon: Php,
-  },
-  {
-    name: "Laravel",
-    icon: Laravel,
+    name: "GraphQL",
+    icon: Graphql,
   },
 ];
 
@@ -117,17 +112,21 @@ const crossPlatform = [
     icon: Flutter,
   },
   {
-    name: "R. Native",
+    name: "React Native",
     icon: React,
     class: "text-[#00D8FF]",
   },
   {
-    name: "Tauri",
-    icon: Tauri,
-  },
-  {
     name: "Ionic",
     icon: Ionic,
+  },
+  {
+    name: "Kotlin",
+    icon: Kotlin,
+  },
+  {
+    name: "Tauri",
+    icon: Tauri,
   },
   {
     name: "Electron",
@@ -142,7 +141,7 @@ const databases = [
     icon: Postgresql,
   },
   {
-    name: "Oracle Database",
+    name: "OracleDB",
     class: "size-9 lg:size-12",
     icon: Oracle,
   },
