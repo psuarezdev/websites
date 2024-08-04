@@ -1,9 +1,10 @@
 ---
 import Link from "./icons/Link.astro";
 import GitHub from "./icons/GitHub.astro";
-
 import Nextjs from "./icons/Nextjs.astro";
+import Angular from "./icons/Angular.astro";
 import Reactjs from "./icons/React.astro";
+import Express from "./icons/Express.astro";
 import Nestjs from "./icons/Nestjs.astro";
 import Typescript from "./icons/Typescript.astro";
 import Tailwind from "./icons/Tailwind.astro";
@@ -11,6 +12,7 @@ import LinkButton from "./LinkButton.astro";
 import Postgresql from "./icons/Postgresql.astro";
 import Prisma from "./icons/Prisma.astro";
 import MongoDB from "./icons/Mongodb.astro";
+import Stripe from "./icons/Stripe.astro";
 
 const TAGS = {
   TYPESCRIPT: {
@@ -53,14 +55,30 @@ const TAGS = {
     class: "bg-[#47B548] text-white",
     icon: MongoDB,
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#D11B44] text-white",
+    icon: Angular,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-[#000000] text-white",
+    icon: Express,
+  },
+  STRIPE: {
+    name: "Stripe",
+    class: "bg-[#9BA1DE] text-white",
+    icon: Stripe,
+  },
 };
 
 const PROJECTS = [
   {
     title: "LoMobility",
-    description: "Innovadora iniciativa que busca empoderar a los ciudadanos para mejorar la accesibilidad en entornos urbanos",
+    description:
+      "Innovadora iniciativa que busca empoderar a los ciudadanos para mejorar la accesibilidad en entornos urbanos",
     link: "http://herraduramasproquo.com",
-    image: "/projects/lomobility.png",
+    image: "/projects/lomobility.webp",
     tags: [
       TAGS.NEXT,
       TAGS.TYPESCRIPT,
@@ -115,10 +133,28 @@ const PROJECTS = [
       TAGS.POSTGRESQL,
     ],
   },
+  {
+    title: "Angular E-Commerce",
+    description:
+      "Fullstack E-Commerce: Angular, Express.js, MongoDB, Mongoose, Stripe and TailwindCSS",
+    link: "",
+    github: "https://github.com/psuarezdev/angular-ecommerce",
+    image: "/projects/angular-ecommerce.webp",
+    tags: [
+      TAGS.ANGULAR,
+      TAGS.EXPRESS,
+      TAGS.STRIPE,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.MONGODB,
+    ],
+  },
 ];
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 mt-16">
+<div
+  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-12 mt-16"
+>
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="flex flex-col space-x-0 space-y-8 group">
