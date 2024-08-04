@@ -4,7 +4,7 @@ import LinkInline from "./LinkInline.astro";
 interface Props {
   title: string;
   company?: string;
-  description: string;
+  description: string[];
   link?: string;
   date: string;
 }
@@ -31,7 +31,7 @@ const { title, company, description, link, date } = Astro.props;
     <div
       class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3"
     >
-      {description}
+      {description.map(str => <p>{str}</p>)}
       {
         link && (
           <LinkInline href={link}>
