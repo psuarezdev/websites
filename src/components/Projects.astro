@@ -13,6 +13,8 @@ import Postgresql from "./icons/Postgresql.astro";
 import Prisma from "./icons/Prisma.astro";
 import MongoDB from "./icons/Mongodb.astro";
 import Stripe from "./icons/Stripe.astro";
+import Tauri from "./icons/Tauri.astro";
+import Rust from "./icons/Rust.astro";
 
 const TAGS = {
   TYPESCRIPT: {
@@ -70,6 +72,16 @@ const TAGS = {
     class: "bg-[#9BA1DE] text-white",
     icon: Stripe,
   },
+  TAURI: {
+    name: "Tauri",
+    class: "bg-[#A0A0A0] text-white",
+    icon: Tauri,
+  },
+  RUST: {
+    name: "Rust",
+    class: "bg-[#efefef] text-black",
+    icon: Rust,
+  },
 };
 
 const PROJECTS = [
@@ -78,7 +90,7 @@ const PROJECTS = [
     description:
       "Innovadora iniciativa que busca empoderar a los ciudadanos para mejorar la accesibilidad en entornos urbanos",
     link: "http://herraduramasproquo.com",
-    image: "/projects/lomobility.webp",
+    image: "lomobility.webp",
     tags: [
       TAGS.NEXT,
       TAGS.TYPESCRIPT,
@@ -93,7 +105,7 @@ const PROJECTS = [
       "Clon Fullstack de Discord: Next.js 14, TypeScript, PostgreSQL, Socket.io, Prisma, Tailwind",
     link: "",
     github: "https://github.com/psuarezdev/discord-clone",
-    image: "/projects/discord-clone.webp",
+    image: "discord-clone.webp",
     tags: [
       TAGS.NEXT,
       TAGS.TYPESCRIPT,
@@ -108,7 +120,7 @@ const PROJECTS = [
       "Clon Fullstack de Airbnb: React.js, Nest,js, TypeScript, MongoDB, Prisma, Tailwind",
     link: "",
     github: "https://github.com/psuarezdev/airbnb-clone",
-    image: "/projects/airbnb-clone.webp",
+    image: "airbnb-clone.webp",
     tags: [
       TAGS.REACT,
       TAGS.NEST,
@@ -124,7 +136,7 @@ const PROJECTS = [
       "Clon Fullstack de Reddit: Next.js 14, TypeScript, PostgreSQL, TanStack Query, Prisma, Tailwind, Redis",
     link: "",
     github: "https://github.com/psuarezdev/reddit-clone",
-    image: "/projects/reddit-clone.webp",
+    image: "reddit-clone.webp",
     tags: [
       TAGS.NEXT,
       TAGS.TYPESCRIPT,
@@ -139,7 +151,7 @@ const PROJECTS = [
       "Fullstack E-Commerce: Angular, Express.js, MongoDB, Mongoose, Stripe and TailwindCSS",
     link: "",
     github: "https://github.com/psuarezdev/angular-ecommerce",
-    image: "/projects/angular-ecommerce.webp",
+    image: "angular-ecommerce.webp",
     tags: [
       TAGS.ANGULAR,
       TAGS.EXPRESS,
@@ -147,6 +159,21 @@ const PROJECTS = [
       TAGS.TYPESCRIPT,
       TAGS.TAILWIND,
       TAGS.MONGODB,
+    ],
+  },
+  {
+    title: "GridifyJSON",
+    description:
+      "GridifyJSON is a desktop application that lets you quickly and easily load and edit JSON files in a table.",
+    link: "",
+    github: "https://github.com/psuarezdev/gridify-json",
+    image: "gridify-json.webp",
+    tags: [
+      TAGS.TAURI,
+      TAGS.RUST,
+      TAGS.REACT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
     ],
   },
 ];
@@ -163,7 +190,7 @@ const PROJECTS = [
             <img
               class="object-cover object-top w-full h-56 transition duration-500 rounded-lg sm:h-full md:scale-105 hover:md:scale-110"
               loading="lazy"
-              src={image}
+              src={`/projects/${image}`}
             />
           </div>
         </div>
