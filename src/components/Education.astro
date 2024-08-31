@@ -1,4 +1,5 @@
 ---
+import Certificates from "./Certificates";
 import EducationItem from "./EducationItem.astro";
 
 const EDUCATION = [
@@ -7,14 +8,14 @@ const EDUCATION = [
     school: "IES Lomo La Herradura",
     // TODO: Add average and end date when finished
     date: "Septiembre 2023 - Actualidad",
-    link: "https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html"
+    link: "https://www.todofp.es/que-estudiar/loe/informatica-comunicaciones/des-aplicaciones-multiplataforma.html",
   },
   {
     title: "Técnico en Sistemas Microinformáticos y Redes",
     school: "IES Lomo La Herradura",
     date: "Septiembre 2021 - Junio 2023",
     average: "8.6",
-    link: "https://todofp.es/que-estudiar/loe/informatica-comunicaciones/sistemas-microniformaticos-redes.html"
+    link: "https://todofp.es/que-estudiar/loe/informatica-comunicaciones/sistemas-microniformaticos-redes.html",
   },
 ];
 ---
@@ -27,4 +28,20 @@ const EDUCATION = [
       </li>
     ))
   }
+  <li>
+    <div
+      class="relative mx-12 pb-12 grid before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/15 dark:before:border-white/15 before:content-[''] md:grid-cols-5 md:gap-10 md:space-x-4]"
+    >
+      <div class="relative pb-12 col-span-12">
+        <div class="top-0">
+          <span
+            class="text-yellow-400 -left-[42px] absolute rounded-full text-5xl"
+          >
+            &bull;
+          </span>
+          <Certificates client:only />
+        </div>
+      </div>
+    </div>
+  </li>
 </ol>
