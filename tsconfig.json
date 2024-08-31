@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "C:/Users/pablo/OneDrive/Documentos/portfolio",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "./src/*"
