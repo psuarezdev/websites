@@ -5,8 +5,8 @@ import Layout from "@/layouts/Layout.astro";
 import Badge from "@/components/Badge.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import SocialPill from "@/components/SocialPill.astro";
-import Experience from "@/components/Experience.astro";
-import Education from "@/components/Education.astro";
+import Experience from "@/components/Experience/Experience.astro";
+import Education from "@/components/Education/Education.astro";
 import Projects from "@/components/Projects.astro";
 import LinkedInIcon from "@/components/icons/LinkedIn.astro";
 import GitHubIcon from "@/components/icons/GitHub.astro";
@@ -17,7 +17,7 @@ import Book from "@/components/icons/Book.astro";
 import Cv from "@/components/icons/Cv.astro";
 import ProfileCheck from "@/components/icons/ProfileCheck.astro";
 import AboutMe from "@/components/AboutMe.astro";
-import TechStack from "@/components/TechStack.astro";
+import TechSkills from "@/components/TechSkills/TechSkills.astro";
 import Technology from "@/components/icons/Technology.astro";
 ---
 
@@ -29,7 +29,7 @@ import Technology from "@/components/icons/Technology.astro";
     <SectionContainer id="presentation" class="py-24 sm:py-44 pb-32">
       <article class="flex items-center gap-3 mb-4 py-1">
         <img
-          class="rounded-full size-12 transition-all duration-300 md:hover:scale-110"
+          class="rounded-full size-12 transition-all duration-300 md:hover:scale-105"
           src="/psuarezdev.webp"
           alt="psuarezdev"
         />
@@ -118,7 +118,7 @@ import Technology from "@/components/icons/Technology.astro";
         <Technology class="size-8" />
         Tecnologías
       </h2>
-      <TechStack />
+      <TechSkills />
     </SectionContainer>
     <SectionContainer id="about-me">
       <h2

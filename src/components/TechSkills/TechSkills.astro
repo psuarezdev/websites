@@ -1,0 +1,143 @@
+---
+import Nextjs from "../icons/Nextjs.astro";
+import React from "../icons/React.astro";
+import Angular from "../icons/Angular.astro";
+import Bootstrap from "../icons/Bootstrap.astro";
+import Tailwind from "../icons/Tailwind.astro";
+
+import Express from "../icons/Express.astro";
+import Nestjs from "../icons/Nestjs.astro";
+import Netframework from "../icons/NetFramework.astro";
+import Spring from "../icons/Spring.astro";
+import Graphql from "../icons/Graphql.astro";
+
+import MySql from "../icons/MySql.astro";
+import Postgresql from "../icons/Postgresql.astro";
+import Oracle from "../icons/Oracle.astro";
+import SQLServer from "../icons/SQLServer.astro";
+import MongoDB from "../icons/Mongodb.astro";
+
+import Flutter from "../icons/Flutter.astro";
+import Ionic from "../icons/Ionic.astro";
+import Tauri from "../icons/Tauri.astro";
+import Kotlin from "../icons/Kotlin.astro";
+import TechSkillItem from "../TechSkills/TechSkillItem.astro";
+import { Separator } from "../ui/separator";
+
+const frontend = [
+  {
+    icon: Nextjs,
+    link: "https://nextjs.org/",
+  },
+  {
+    icon: React,
+    class: "text-[#00D8FF]",
+    link: "https://react.dev/",
+  },
+  {
+    icon: Angular,
+    class: "text-[#C4473A]",
+    link: "https://angular.dev/",
+  },
+  {
+    icon: Tailwind,
+    link: "https://tailwindcss.com/",
+  },
+  {
+    icon: Bootstrap,
+    link: "https://getbootstrap.com/",
+  },
+];
+
+const backend = [
+  {
+    icon: Express,
+    class: "text-[#000]",
+    link: "https://expressjs.com/",
+  },
+  {
+    icon: Nestjs,
+    class: "text-[#DF234F]",
+    link: "https://nestjs.com/",
+  },
+  {
+    icon: Netframework,
+    link: "https://dotnet.microsoft.com/apps/aspnet",
+  },
+  {
+    icon: Spring,
+    link: "https://spring.io/",
+  },
+  {
+    icon: Graphql,
+    link: "https://graphql.org/",
+  },
+];
+
+const crossPlatform = [
+  {
+    icon: Flutter,
+    link: "https://flutter.dev/",
+  },
+  {
+    icon: Kotlin,
+    link: "https://kotlinlang.org/",
+  },
+  {
+    icon: React,
+    class: "text-[#00D8FF]",
+    link: "https://reactnative.dev/",
+  },
+  {
+    icon: Ionic,
+    link: "https://ionicframework.com/",
+  },
+  {
+    icon: Tauri,
+    link: "https://tauri.app/",
+  },
+];
+
+const databases = [
+  {
+    icon: Postgresql,
+    class: "text-[#336791]",
+    link: "https://www.postgresql.org/",
+  },
+  {
+    icon: Oracle,
+    link: "https://www.oracle.com/database/",
+  },
+  {
+    icon: SQLServer,
+    link: "https://www.microsoft.com/sql-server/sql-server-2022",
+  },
+  {
+    icon: MySql,
+    link: "https://www.mysql.com/",
+  },
+  {
+    icon: MongoDB,
+    link: "https://www.mongodb.com/",
+  },
+];
+---
+
+<section
+  class="border border-black/15 dark:border-white/15 p-5 md:p-10 rounded-lg"
+>
+  <div
+    class="flex flex-col md:flex-row md:items-center md:justify-center gap-y-2 gap-x-16 mb-3 md:mb-5"
+  >
+    <TechSkillItem title="Front-End" icons={frontend} />
+    <Separator orientation="vertical" className="hidden md:block h-20" />
+    <TechSkillItem title="Back-End" icons={backend} />
+  </div>
+  <div
+    class="flex flex-col md:flex-row md:items-center md:justify-center gap-y-2 gap-x-16 mb-3 md:mb-5"
+  >
+    <TechSkillItem title="Multiplataforma" icons={crossPlatform} />
+    <Separator orientation="vertical" className="hidden md:block h-20" />
+    <TechSkillItem title="Bases de datos" icons={databases} />
+  </div>
+</section>

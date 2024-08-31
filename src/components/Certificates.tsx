@@ -92,7 +92,7 @@ export default function Certificates() {
           </DialogTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {CERTS.map((cert, index) => (
-              <article key={`cert-${index}`} className="transition duration-300 transform hover:scale-105">
+              <article key={`cert-${index}`} className="transition duration-500 transform hover:scale-105">
                 <a href={cert.link} target="_blank" rel="noopener noreferrer">
                   <img
                     className="rounded-lg w-full opacity-90 border border-gray-500 dark:border-gray-400"
