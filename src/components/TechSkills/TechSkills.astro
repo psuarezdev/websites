@@ -1,28 +1,25 @@
 ---
+import { Separator } from "../ui/separator";
+import TechSkillItem from "../TechSkills/TechSkillItem.astro";
+
 import Nextjs from "../icons/Nextjs.astro";
 import React from "../icons/React.astro";
 import Angular from "../icons/Angular.astro";
-import Bootstrap from "../icons/Bootstrap.astro";
-import Tailwind from "../icons/Tailwind.astro";
 
 import Express from "../icons/Express.astro";
 import Nestjs from "../icons/Nestjs.astro";
 import Netframework from "../icons/NetFramework.astro";
 import Spring from "../icons/Spring.astro";
-import Graphql from "../icons/Graphql.astro";
+
+import Kotlin from "../icons/Kotlin.astro";
+import Flutter from "../icons/Flutter.astro";
+import Ionic from "../icons/Ionic.astro";
 
 import MySql from "../icons/MySql.astro";
 import Postgresql from "../icons/Postgresql.astro";
 import Oracle from "../icons/Oracle.astro";
 import SQLServer from "../icons/SQLServer.astro";
 import MongoDB from "../icons/Mongodb.astro";
-
-import Flutter from "../icons/Flutter.astro";
-import Ionic from "../icons/Ionic.astro";
-import Tauri from "../icons/Tauri.astro";
-import Kotlin from "../icons/Kotlin.astro";
-import TechSkillItem from "../TechSkills/TechSkillItem.astro";
-import { Separator } from "../ui/separator";
 
 const frontend = [
   {
@@ -38,14 +35,6 @@ const frontend = [
     icon: Angular,
     class: "text-[#C4473A]",
     link: "https://angular.dev/",
-  },
-  {
-    icon: Tailwind,
-    link: "https://tailwindcss.com/",
-  },
-  {
-    icon: Bootstrap,
-    link: "https://getbootstrap.com/",
   },
 ];
 
@@ -68,20 +57,16 @@ const backend = [
     icon: Spring,
     link: "https://spring.io/",
   },
-  {
-    icon: Graphql,
-    link: "https://graphql.org/",
-  },
 ];
 
 const crossPlatform = [
   {
-    icon: Flutter,
-    link: "https://flutter.dev/",
-  },
-  {
     icon: Kotlin,
     link: "https://kotlinlang.org/",
+  },
+  {
+    icon: Flutter,
+    link: "https://flutter.dev/",
   },
   {
     icon: React,
@@ -91,10 +76,6 @@ const crossPlatform = [
   {
     icon: Ionic,
     link: "https://ionicframework.com/",
-  },
-  {
-    icon: Tauri,
-    link: "https://tauri.app/",
   },
 ];
 
@@ -124,20 +105,16 @@ const databases = [
 ---
 
 <section
-  class="border border-black/15 dark:border-white/15 p-5 md:p-10 rounded-lg"
+  class="grid grid-cols-1 md:grid-cols-[auto_150px_auto] items-center place-content-center md:[&>div]:h-[84px] space-y-2 md:space-y-5 border border-black/15 dark:border-white/15 p-5 md:p-10 rounded-lg"
 >
-  <div
-    class="flex flex-col md:flex-row md:items-center md:justify-center gap-y-2 gap-x-16 mb-3 md:mb-5"
-  >
-    <TechSkillItem title="Front-End" icons={frontend} />
+  <TechSkillItem class="mt-5" title="Front-End" icons={frontend} />
+  <div class="flex items-center justify-center">
     <Separator orientation="vertical" className="hidden md:block h-20" />
-    <TechSkillItem title="Back-End" icons={backend} />
   </div>
-  <div
-    class="flex flex-col md:flex-row md:items-center md:justify-center gap-y-2 gap-x-16 mb-3 md:mb-5"
-  >
-    <TechSkillItem title="Multiplataforma" icons={crossPlatform} />
+  <TechSkillItem title="Back-End" icons={backend} />
+  <TechSkillItem title="Multiplataforma" icons={crossPlatform} />
+  <div class="flex items-center justify-center">
     <Separator orientation="vertical" className="hidden md:block h-20" />
-    <TechSkillItem title="Bases de datos" icons={databases} />
   </div>
+  <TechSkillItem title="Bases de datos" icons={databases} />
 </section>
