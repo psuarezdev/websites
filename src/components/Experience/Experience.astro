@@ -1,8 +1,10 @@
 ---
+import { getDifferenceBetweenDates } from "@/lib/utils";
 import ExperienceItem from "../Experience/ExperienceItem.astro";
+
 const EXPERIENCIE = [
   {
-    date: "Mayo 2023 - Septiembre 2023 (5 meses)",
+    date: `Mayo 2023 - Septiembre 2023 (${getDifferenceBetweenDates("2023-05-01", "2023-10-01")})`,
     title: "Desarrollador Web y Administrador de Sistemas",
     company: "Suisca Group Projects & Services",
     description: [

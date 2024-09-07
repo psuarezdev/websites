@@ -1,5 +1,5 @@
 ---
-import { calculateAge } from "@/lib/utils";
+import { getAgeFromBirthdate } from "@/lib/utils";
 ---
 
 <article
@@ -9,7 +9,7 @@ import { calculateAge } from "@/lib/utils";
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Me llamo Pablo Suárez, aunque mis amigos me llaman Torito. Tengo {calculateAge("2003-11-15")} años y 
+      Me llamo Pablo Suárez, aunque mis amigos me llaman Torito. Tengo {getAgeFromBirthdate("2003-11-15")} años y 
       llevo inmerso en el mundo de la informática desde que tenía 15 años. Mi <strong>curiosidad y pasión por la 
         tecnología</strong> me han impulsado a explorar diversas áreas, adaptándome rápidamente a nuevos entornos 
       tecnológicos y aprendiendo nuevas habilidades.
