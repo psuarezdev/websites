@@ -5,11 +5,10 @@ interface Props {
   title: string;
   school: string;
   date?: string;
-  average?: string;
   link: string;
 }
 
-const { title, school, date, average, link } = Astro.props;
+const { title, school, date, link } = Astro.props;
 ---
 
 <div
@@ -27,11 +26,6 @@ const { title, school, date, average, link } = Astro.props;
         {date && (
           <p class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
             {date}
-          </p>
-        )}
-        {average && (
-          <p class="mt-2 text-lg font-bold text-gray-700 dark:text-gray-300">
-            Nota media: {average}
           </p>
         )}
     </div>
