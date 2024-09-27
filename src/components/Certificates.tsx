@@ -10,41 +10,35 @@ import {
 import { Button } from '@/components/ui/button';
 import { Separator } from './ui/separator';
 
-const CERTS = [
+const CERTIFICATES = [
   {
     id: "UC-f75910f3-d6ff-4c03-b4b5-0560abaef75f",
     title: "Master en React - MERN STACK",
-    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-f75910f3-d6ff-4c03-b4b5-0560abaef75f.jpg",
     duration: 38
   },
   {
     id: "UC-335f5741-d131-4137-9d48-4cb78b493651",
-    title: "Angula de cero a experto",
-    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-335f5741-d131-4137-9d48-4cb78b493651.jpg",
+    title: "Angular de cero a experto",
     duration: 45
   },
   {
     id: "UC-b1a56767-4754-4d6e-9620-e627d94d5089",
     title: "Spring Framework 6 & Spring Boot 3 desde cero a experto",
-    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-b1a56767-4754-4d6e-9620-e627d94d5089.jpg",
     duration: 81
   },
   {
     id: "UC-354711c1-1ffe-4666-b351-bc2b9162f820",
     title: "Flutter de cero a experto",
-    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-354711c1-1ffe-4666-b351-bc2b9162f820.jpg",
     duration: 50.5
   },
   {
     id: "UC-84774d44-abed-4961-8894-2ccc1fbe434c",
     title: "React Native - Aplicaciones nativas para IOS y Android",
-    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-84774d44-abed-4961-8894-2ccc1fbe434c.jpg",
     duration: 33
   },
   {
     id: "UC-df589da4-da8b-47ed-87af-880f88d8be57",
     title: "Master en PHP, SQL, POO, MVC, Laravel, Symfony y WordPress",
-    image: "https://udemy-certificate.s3.amazonaws.com/image/UC-df589da4-da8b-47ed-87af-880f88d8be57.jpg",
     duration: 56.5
   },
 ];
@@ -91,17 +85,17 @@ export default function Certificates() {
             <Separator />
           </DialogTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            {CERTS.map((cert, index) => (
-              <article key={`cert-${index}`} className="transition duration-500 transform hover:scale-105">
-                <a href={`/https://www.udemy.com/certificate/${cert.id}`} target="_blank" rel="noopener noreferrer">
+            {CERTIFICATES.map(({ id, title, duration }) => (
+              <article key={`certificate-${id}`} className="transition duration-500 transform hover:scale-105">
+                <a href={`/certificates/${id}.webp`} target="_blank" rel="noopener noreferrer">
                   <img
                     className="rounded-lg w-full opacity-90 border border-gray-500 dark:border-gray-400"
-                    src={cert.image}
-                    alt={cert.title}
+                    src={`/certificates/${id}.webp`}
+                    alt={title}
                   />
                 </a>
                 <span className="inline-block p-0 mt-1.5 text-sm text-gray-600/80 dark:text-white/80">
-                  Duración: {cert.duration} horas en total
+                  Duración: {duration} horas en total
                 </span>
               </article>
             ))}
