@@ -94,7 +94,7 @@ export default function Certificates() {
               <article key={`certificate-${id}`} className="transition duration-500 transform hover:scale-105">
                 <a href={`/certificates/${id}.webp`} target="_blank" rel="noopener noreferrer">
                   <img
-                    className="rounded-lg w-full opacity-90 border border-gray-500 dark:border-gray-400"
+                    className="rounded-lg w-full aspect-[4/3] opacity-90 border border-gray-500 dark:border-gray-400"
                     src={`/certificates/${id}.webp`}
                     alt={title}
                   />
