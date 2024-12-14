@@ -15,6 +15,9 @@ import MongoDB from "./icons/Mongodb.astro";
 import Stripe from "./icons/Stripe.astro";
 import Tauri from "./icons/Tauri.astro";
 import Rust from "./icons/Rust.astro";
+import Redis from "./icons/Redis.astro";
+import Python from "./icons/Python.astro";
+import Cloudinary from "./icons/cloudinary.astro";
 
 const TAGS = {
   TYPESCRIPT: {
@@ -54,7 +57,7 @@ const TAGS = {
   },
   MONGODB: {
     name: "MongoDB",
-    class: "bg-[#47B548] text-white",
+    class: "bg-[#47C548] text-white",
     icon: MongoDB,
   },
   ANGULAR: {
@@ -82,9 +85,42 @@ const TAGS = {
     class: "bg-[#efefef] text-black",
     icon: Rust,
   },
+  REDIS: {
+    name: "Redis",
+    class: "bg-white text-[#C6302B]",
+    icon: Redis,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-yellow-500",
+    icon: Python,
+  },
+  CLOUDINARY: {
+    name: "Cloudinary",
+    class: "bg-white text-[#3146C6]",
+    icon: Cloudinary,
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "PSuarezDev Academy",
+    description:
+      "Plataforma de E-Learning que facilita el acceso a cursos y la gestión de contenidos con un sistema de roles. Con su interfaz moderna y funciones avanzadas, ofrece una solución práctica y escalable para la educación digital.",
+    link: "",
+    github: "https://github.com/psuarezdev/psuarezdev-academy",
+    image: "psuarezdev-academy.webp",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TYPESCRIPT,
+      TAGS.TAILWIND,
+      TAGS.PRISMA,
+      TAGS.POSTGRESQL,
+      TAGS.STRIPE,
+      TAGS.CLOUDINARY,
+      TAGS.PYTHON,
+    ],
+  },
   {
     title: "LoMobility",
     description:
@@ -101,8 +137,7 @@ const PROJECTS = [
   },
   {
     title: "Clon de Discord",
-    description:
-      "Clon Fullstack de Discord: Next.js 14, TypeScript, PostgreSQL, Socket.io, Prisma, Tailwind",
+    description: "Clon Fullstack de Discord",
     link: "",
     github: "https://github.com/psuarezdev/discord-clone",
     image: "discord-clone.webp",
@@ -116,8 +151,7 @@ const PROJECTS = [
   },
   {
     title: "Clon de Airbnb",
-    description:
-      "Clon Fullstack de Airbnb: React.js, Nest,js, TypeScript, MongoDB, Prisma, Tailwind",
+    description: "Clon Fullstack de Airbnb",
     link: "",
     github: "https://github.com/psuarezdev/airbnb-clone",
     image: "airbnb-clone.webp",
@@ -128,12 +162,12 @@ const PROJECTS = [
       TAGS.TAILWIND,
       TAGS.PRISMA,
       TAGS.MONGODB,
+      TAGS.REDIS,
     ],
   },
   {
     title: "Clon de Reddit",
-    description:
-      "Clon Fullstack de Reddit: Next.js 14, TypeScript, PostgreSQL, TanStack Query, Prisma, Tailwind, Redis",
+    description: "Clon Fullstack de Reddit",
     link: "",
     github: "https://github.com/psuarezdev/reddit-clone",
     image: "reddit-clone.webp",
@@ -147,8 +181,7 @@ const PROJECTS = [
   },
   {
     title: "Angular E-Commerce",
-    description:
-      "Fullstack E-Commerce: Angular, Express.js, MongoDB, Mongoose, Stripe and TailwindCSS",
+    description: "Fullstack E-Commerce",
     link: "",
     github: "https://github.com/psuarezdev/angular-ecommerce",
     image: "angular-ecommerce.webp",
@@ -196,8 +229,7 @@ const PROJECTS = [
                 </li>
               ))}
             </ul>
-
-            <div class="mt-2 text-gray-700 dark:text-gray-400">
+            <div class="w-full mt-2 text-gray-700 dark:text-gray-400">
               {description}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
