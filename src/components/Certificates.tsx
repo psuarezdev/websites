@@ -41,11 +41,11 @@ const CERTIFICATES = [
     title: "Master en PHP, SQL, POO, MVC, Laravel, Symfony y WordPress",
     duration: 56.5
   },
-  {
+  /*{
     id: "5xAY",
     title:  "Curso de Django",
     duration: 9
-  }
+  }*/
 ];
 
 const Certificate = () => (
