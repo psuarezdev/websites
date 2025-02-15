@@ -10,22 +10,24 @@ import Angular from "../icons/Angular.astro";
 
 import Express from "../icons/Express.astro";
 import Nestjs from "../icons/Nestjs.astro";
-import Spring from "../icons/Spring.astro";
+import Netframework from "../icons/NetFramework.astro";
+// import Spring from "../icons/Spring.astro";
 
-import Kotlin from "../icons/Kotlin.astro";
-import Flutter from "../icons/Flutter.astro";
+// import Kotlin from "../icons/Kotlin.astro";
+// import Flutter from "../icons/Flutter.astro";
 
 import Postgresql from "../icons/Postgresql.astro";
+import SQLServer from "../icons/SQLServer.astro";
 import Oracle from "../icons/Oracle.astro";
 import MySql from "../icons/MySql.astro";
 import MongoDB from "../icons/Mongodb.astro";
 
-// const dataScience = [
-//   {
-//     icon: Python,
-//     link: "https://www.python.org/",
-//   },
-// ];
+/*const dataScience = [
+   {
+     icon: Python,
+     link: "https://www.python.org/",
+  },
+];*/
 
 const frontend = [
   {
@@ -56,12 +58,16 @@ const backend = [
     link: "https://nestjs.com/",
   },
   {
+    icon: Netframework,
+    link: "https://dotnet.microsoft.com/apps/aspnet",
+  },
+  /*{
     icon: Spring,
     link: "https://spring.io/",
-  }
+  }*/
 ];
 
-const crossPlatform = [
+/*const crossPlatform = [
   {
     icon: Kotlin,
     link: "https://kotlinlang.org/",
@@ -75,13 +81,17 @@ const crossPlatform = [
     class: "text-[#00D8FF]",
     link: "https://reactnative.dev/",
   },
-];
+];*/
 
 const databases = [
   {
     icon: Postgresql,
     class: "text-[#336791]",
     link: "https://www.postgresql.org/",
+  },
+  {
+    icon: SQLServer,
+    link: "https://www.microsoft.com/sql-server/sql-server-2022",
   },
   {
     icon: Oracle,
@@ -107,9 +117,6 @@ const databases = [
     <Separator orientation="vertical" className="hidden md:block h-20" />
   </div>
   <TechSkillItem title="Back-End" icons={backend} />
-  <TechSkillItem title="Móvil" icons={crossPlatform} />
-  <div class="flex items-center justify-center">
-    <Separator orientation="vertical" className="hidden md:block h-20" />
-  </div>
-  <TechSkillItem title="Bases de datos" icons={databases} />
+  <!-- <TechSkillItem title="Móvil" icons={crossPlatform} /> -->
+  <TechSkillItem class="mt-5 col-span-3" title="Bases de datos" icons={databases} />
 </section>
