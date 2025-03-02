@@ -13,7 +13,7 @@ import { Separator } from './ui/separator';
 const CERTIFICATES = [
   {
     id: "UC-f75910f3-d6ff-4c03-b4b5-0560abaef75f",
-    title: "Master en React - MERN STACK",
+    title: "Master en React, Express, MongoDB y JWT",
     duration: 38
   },
   {
@@ -22,30 +22,30 @@ const CERTIFICATES = [
     duration: 45
   },
   {
-    id: "UC-b1a56767-4754-4d6e-9620-e627d94d5089",
-    title: "Spring Framework 6 & Spring Boot 3 desde cero a experto",
-    duration: 81
+    id: "ovhxC5AE",
+    title: "Profundizando en Next.js",
+    duration: 7,
   },
   {
-    id: "UC-354711c1-1ffe-4666-b351-bc2b9162f820",
-    title: "Flutter de cero a experto",
-    duration: 50.5
+    id: "cBB5nJDt",
+    title: "Curso de .NET Framework",
+    duration: 10,
+  },
+  // {
+  //   id: "UC-b1a56767-4754-4d6e-9620-e627d94d5089",
+  //   title: "Spring Framework 6 & Spring Boot 3 desde cero a experto",
+  //   duration: 81
+  // },
+  {
+    id: "tnW0HpPq",
+    title: "Curso de Django",
+    duration: 20
   },
   {
-    id: "UC-84774d44-abed-4961-8894-2ccc1fbe434c",
-    title: "React Native - Aplicaciones nativas para IOS y Android",
-    duration: 33
-  },
-  {
-    id: "UC-df589da4-da8b-47ed-87af-880f88d8be57",
-    title: "Master en PHP, SQL, POO, MVC, Laravel, Symfony y WordPress",
-    duration: 56.5
-  },
-  /*{
-    id: "5xAY",
-    title:  "Curso de Django",
-    duration: 9
-  }*/
+    id: "yfkS73Y7",
+    title: "SQL Server desde Cero",
+    duration: 8
+  }
 ];
 
 const Certificate = () => (
