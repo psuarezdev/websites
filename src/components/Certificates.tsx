@@ -14,22 +14,27 @@ const CERTIFICATES = [
   {
     id: "UC-f75910f3-d6ff-4c03-b4b5-0560abaef75f",
     title: "Master en React, Express, MongoDB y JWT",
-    duration: 38
+    duration: "38 Horas"
   },
   {
     id: "UC-335f5741-d131-4137-9d48-4cb78b493651",
     title: "Angular de cero a experto",
-    duration: 45
+    duration: "45 Horas"
   },
   {
     id: "ovhxC5AE",
     title: "Profundizando en Next.js",
-    duration: 7,
+    duration: "7 Horas",
+  },
+  {
+    id: "tnW0HpPq",
+    title: "Curso de Django",
+    duration: "20 Horas"
   },
   {
     id: "cBB5nJDt",
     title: "Curso de .NET Framework",
-    duration: 10,
+    duration: "10 Horas",
   },
   // {
   //   id: "UC-b1a56767-4754-4d6e-9620-e627d94d5089",
@@ -37,14 +42,9 @@ const CERTIFICATES = [
   //   duration: 81
   // },
   {
-    id: "tnW0HpPq",
-    title: "Curso de Django",
-    duration: 20
-  },
-  {
     id: "yfkS73Y7",
     title: "SQL Server desde Cero",
-    duration: 8
+    duration: "8 Horas"
   }
 ];
 
@@ -100,7 +100,7 @@ export default function Certificates() {
                   />
                 </a>
                 <span className="inline-block p-0 mt-1.5 text-sm text-gray-600/80 dark:text-white/80">
-                  Duración: {duration} horas en total
+                  Duración: {duration}
                 </span>
               </article>
             ))}
