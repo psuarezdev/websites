@@ -13,7 +13,6 @@ import Tauri from "../icons/Tauri.astro";
 import Rust from "../icons/Rust.astro";
 import Redis from "../icons/Redis.astro";
 import Python from "../icons/Python.astro";
-import Cloudinary from "../icons/cloudinary.astro";
 
 export const TAGS = {
   TYPESCRIPT: {
@@ -90,10 +89,5 @@ export const TAGS = {
     name: "Python",
     class: "bg-yellow-500",
     icon: Python,
-  },
-  CLOUDINARY: {
-    name: "Cloudinary",
-    class: "bg-white text-[#3146C6]",
-    icon: Cloudinary,
   },
 };
