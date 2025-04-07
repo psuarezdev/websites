@@ -1,8 +1,8 @@
 ---
 import "@/styles/globals.css";
-import { getAgeFromBirthdate } from "@/lib/utils";
+import { differenceInYears } from "date-fns";
 import Layout from "@/layouts/Layout.astro";
-import Badge from "@/components/Badge.astro";
+// import Badge from "@/components/Badge.astro";
 import SectionContainer from "@/components/SectionContainer.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import Experience from "@/components/Experience/Experience.astro";
@@ -55,7 +55,7 @@ import Technology from "@/components/icons/Technology.astro";
         >
           Hey, soy Pablo Suárez
           <span class="block text-[2rem] mt-1 text-gray-500">
-            Tengo {getAgeFromBirthdate("2003-11-15")} años
+            Tengo {differenceInYears(new Date(), new Date("2003-11-15"))} años
           </span>
         </h1>
         <h2

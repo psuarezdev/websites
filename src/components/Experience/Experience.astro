@@ -1,10 +1,11 @@
 ---
-import { getDifferenceBetweenDates } from "@/lib/utils";
+import { formatDistance } from "date-fns";
+import { es } from "date-fns/locale";
 import ExperienceItem from "../Experience/ExperienceItem.astro";
 
 const EXPERIENCIE = [
   {
-    date: `Febrero 2025 - Actualidad (${getDifferenceBetweenDates("2025-02-1", new Date().toISOString().split('T')[0])})`,
+    date: `Febrero 2025 - Actualidad (${formatDistance(new Date("2025-02-01"), new Date(), { locale: es })})`,
     title: "Desarrollador Full Stack",
     company: "Contactel - Grupo Inetel",
     description: [
@@ -16,7 +17,7 @@ const EXPERIENCIE = [
     ],
   },
   {
-    date: `Mayo 2023 - Septiembre 2023 (${getDifferenceBetweenDates("2023-05-01", "2023-10-01")})`,
+    date: `Mayo 2023 - Septiembre 2023 (${formatDistance(new Date("2023-05-01"), new Date("2023-10-01"), { locale: es })})`,
     title: "Desarrollador Web y Administrador de Sistemas",
     company: "Suisca Group Projects & Services",
     description: [

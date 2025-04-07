@@ -1,5 +1,5 @@
 ---
-import { getAgeFromBirthdate } from "@/lib/utils";
+import { differenceInYears } from "date-fns";
 ---
 
 <article
@@ -9,7 +9,7 @@ import { getAgeFromBirthdate } from "@/lib/utils";
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
   >
     <p>
-      Hola, me llamo Pablo Suárez y tengo {getAgeFromBirthdate('2003-11-15')} años. 
+      Hola, me llamo Pablo Suárez y tengo {differenceInYears(new Date(), new Date("2003-11-15"))} años. 
       Soy un apasionado por el desarrollo de software, la ingeniería y la ciencia de datos.
     </p>
     <p>
