@@ -19,7 +19,12 @@ const CERTIFICATES = [
   {
     id: "UC-335f5741-d131-4137-9d48-4cb78b493651",
     title: "Angular de cero a experto",
-    duration: "45 Horas"
+    duration: "45 Horas",
+  },
+  {
+    id: "UC-b1a56767-4754-4d6e-9620-e627d94d5089",
+    title: "Spring Framework 6 & Spring Boot 3",
+    duration: "81 Horas",
   },
   {
     id: "ovhxC5AE",
@@ -27,25 +32,15 @@ const CERTIFICATES = [
     duration: "7 Horas",
   },
   {
+    id: "1oDIan5q",
+    title: "Programación en C++",
+    duration: "5 Horas",
+  },
+  {
     id: "tnW0HpPq",
     title: "Curso de Django",
     duration: "20 Horas"
   },
-  {
-    id: "cBB5nJDt",
-    title: "Curso de .NET Framework",
-    duration: "10 Horas",
-  },
-  // {
-  //   id: "UC-b1a56767-4754-4d6e-9620-e627d94d5089",
-  //   title: "Spring Framework 6 & Spring Boot 3 desde cero a experto",
-  //   duration: 81
-  // },
-  {
-    id: "yfkS73Y7",
-    title: "SQL Server desde Cero",
-    duration: "8 Horas"
-  }
 ];
 
 const Certificate = () => (
