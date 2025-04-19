@@ -1,11 +1,9 @@
 ---
-import { formatDistance } from "date-fns";
-import { es } from "date-fns/locale";
-import ExperienceItem from "../Experience/ExperienceItem.astro";
+import ExperienceItem from "./ExperienceItem";
 
 const EXPERIENCIE = [
   {
-    date: `Febrero 2025 - Actualidad (${formatDistance(new Date("2025-02-01"), new Date(), { locale: es })})`,
+    startDate: new Date("2025-02-01"),
     title: "Desarrollador Full Stack",
     company: "Contactel - Grupo Inetel",
     description: [
@@ -17,7 +15,8 @@ const EXPERIENCIE = [
     ],
   },
   {
-    date: `Mayo 2023 - Septiembre 2023 (${formatDistance(new Date("2023-05-01"), new Date("2023-10-01"), { locale: es })})`,
+    startDate: new Date("2023-05-01"),
+    endDate: new Date("2023-09-30"),
     title: "Desarrollador Web y Administrador de Sistemas",
     company: "Suisca Group Projects & Services",
     description: [
@@ -34,7 +33,7 @@ const EXPERIENCIE = [
   {
     EXPERIENCIE.map((experiencie) => (
       <li>
-        <ExperienceItem {...experiencie} />
+        <ExperienceItem client:load {...experiencie} />
       </li>
     ))
   }
