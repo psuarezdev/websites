@@ -18,7 +18,7 @@ export function formatJobDate(startDate: Date, endDate?: Date) {
     addSuffix: true,
   });
 
-  return `${formattedStart} - ${formattedEnd} (${distance})`;
+  return `${formattedStart} - ${formattedEnd}`; // (${distance})
 }
 
 export function capitalize(str: string) {
