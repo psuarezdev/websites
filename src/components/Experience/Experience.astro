@@ -1,5 +1,5 @@
 ---
-import ExperienceItem from "./ExperienceItem";
+import ExperienceItem from "./ExperienceItem.astro";
 
 const EXPERIENCIE = [
   {
@@ -33,7 +33,7 @@ const EXPERIENCIE = [
   {
     EXPERIENCIE.map((experiencie) => (
       <li>
-        <ExperienceItem client:load {...experiencie} />
+        <ExperienceItem {...experiencie} />
       </li>
     ))
   }
