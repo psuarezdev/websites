@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -6,30 +6,40 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Separator } from './ui/separator';
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Separator } from "./ui/separator";
 
 const CERTIFICATES = [
   {
     id: "UC-f75910f3-d6ff-4c03-b4b5-0560abaef75f",
     title: "Master en React, Express, MongoDB y JWT",
-    duration: "38 Horas"
+    duration: "38 Horas",
   },
-  {
+  /*{
     id: "UC-335f5741-d131-4137-9d48-4cb78b493651",
     title: "Angular de cero a experto",
     duration: "45 Horas",
-  },
-  {
-    id: "UC-b1a56767-4754-4d6e-9620-e627d94d5089",
-    title: "Spring Framework 6 & Spring Boot 3",
-    duration: "81 Horas",
-  },
+  },*/
+  // {
+  //   id: "UC-b1a56767-4754-4d6e-9620-e627d94d5089",
+  //   title: "Spring Framework 6 & Spring Boot 3",
+  //   duration: "81 Horas",
+  // },
   {
     id: "ovhxC5AE",
     title: "Profundizando en Next.js",
     duration: "7 Horas",
+  },
+  {
+    id: "U5PZ",
+    title: "Creación de Páginas Web con Astro",
+    duration: "9 Horas",
+  },
+  {
+    id: "tnW0HpPq",
+    title: "Curso de Django",
+    duration: "20 Horas",
   },
   {
     id: "1oDIan5q",
@@ -37,10 +47,10 @@ const CERTIFICATES = [
     duration: "5 Horas",
   },
   {
-    id: "tnW0HpPq",
-    title: "Curso de Django",
-    duration: "20 Horas"
-  },
+    id: "R0nx",
+    title: "Docker para desarrolladores",
+    duration: "8 horas",
+  }
 ];
 
 const Certificate = () => (
@@ -76,7 +86,7 @@ export default function Certificates() {
           </h3>
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-4xl max-h-screen overflow-y-scroll md:overflow-auto" >
+      <DialogContent className="max-w-4xl max-h-screen overflow-y-scroll md:overflow-auto">
         <DialogHeader>
           <DialogTitle className="mb-5">
             <span className="flex items-center gap-1.5 text-xl font-bold mb-2">
@@ -86,8 +96,15 @@ export default function Certificates() {
           </DialogTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {CERTIFICATES.map(({ id, title, duration }) => (
-              <article key={`certificate-${id}`} className="transition duration-500 transform hover:scale-105">
-                <a href={`/certificates/${id}.webp`} target="_blank" rel="noopener noreferrer">
+              <article
+                key={`certificate-${id}`}
+                className="transition duration-500 transform hover:scale-105"
+              >
+                <a
+                  href={`/certificates/${id}.webp`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <img
                     className="rounded-lg w-full aspect-[4/3] opacity-90 border border-gray-500 dark:border-gray-400"
                     src={`/certificates/${id}.webp`}
@@ -102,10 +119,11 @@ export default function Certificates() {
           </div>
         </DialogHeader>
         <DialogFooter>
-          <Button variant="outline" onClick={() => setOpen(false)}>Cerrar</Button>
+          <Button variant="outline" onClick={() => setOpen(false)}>
+            Cerrar
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
   );
 }
-
