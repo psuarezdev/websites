@@ -300,11 +300,11 @@ export default function Portfolio() {
               key={i}
               className="absolute w-1 h-1 bg-purple-400 rounded-full"
               initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
+                x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 0),
+                y: Math.random() * (typeof window !== "undefined" ? window.innerHeight : 0),
               }}
               animate={{
-                y: [null, Math.random() * window.innerHeight],
+                y: [null, Math.random() * (typeof window !== "undefined" ? window.innerHeight : 0)],
                 opacity: [0, 1, 0],
               }}
               transition={{
