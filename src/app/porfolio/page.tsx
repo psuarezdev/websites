@@ -106,9 +106,9 @@ const experience = [
     period: 'Febrero 2025 - Actualidad',
     location: 'Telde, Gran Canaria',
     description: [
+      'Desarrollo de APIs REST con Express.js y Node.js',
+      'Desarrollo de APIs REST con Rust y Axum',
       'Desarrollo de aplicaciones web utilizando React y TypeScript',
-      'Implementación de APIs REST con Express.js y Node.js',
-      'Implementación de APIs REST con Rust y Axum',
       'Gestión de bases de datos relacionales con PostgreSQL',
       'Contenerización de aplicaciones con Docker y orquestación con Docker Compose',
       'Uso de Gitea como plataforma de control de versiones y colaboración en el desarrollo'
