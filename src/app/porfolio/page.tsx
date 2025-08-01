@@ -21,6 +21,7 @@ import {
   Download,
   Award
 } from 'lucide-react';
+import { DateTime, Settings } from 'luxon';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -42,9 +43,11 @@ import {
   SiMongodb
 } from 'react-icons/si';
 import Image from 'next/image';
-import { getAgeFromBirthdate } from '@/lib/utils';
+import { getAgeFromBirthdate, isDecimalAboveHalf, stringToTitleCase } from '@/lib/utils';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { AlertDialogHeader } from '@/components/ui/alert-dialog';
+
+Settings.defaultLocale = 'es-ES';
 
 const technologies = [
   { name: 'Next.js', level: 100, icon: SiNextdotjs, category: 'Frontend' },
@@ -103,7 +106,7 @@ const experience = [
   {
     title: 'Desarrollador Full Stack',
     company: 'Contactel - Grupo Inetel',
-    period: 'Febrero 2025 - Actualidad',
+    startDate: DateTime.fromISO('2025-02-01'),
     location: 'Telde, Gran Canaria',
     description: [
       'Desarrollo de APIs REST con Express.js y Node.js',
@@ -113,19 +116,21 @@ const experience = [
       'Contenerización de aplicaciones con Docker y orquestación con Docker Compose',
       'Uso de Gitea como plataforma de control de versiones y colaboración en el desarrollo'
     ],
-    current: true
+    website: 'https://www.contactel.es'
   },
   {
     title: 'Desarrollador Web y Administrador de Sistemas',
     company: 'Suisca Group',
-    period: 'Mayo 2023 - Septiembre 2023',
+    startDate: DateTime.fromISO('2023-05-01'),
+    endDate: DateTime.fromISO('2023-09-30'),
     location: 'Las Palmas de Gran Canaria',
     description: [
       'Desarrollo web con tecnologías como HTML5, CSS3, Bootstrap 5, TailwindCSS, JavaScript, PHP y Laravel, asegurando interfaces intuitivas y responsivas',
       'Gestión de bases de datos Oracle 11g, incluyendo la creación, optimización, mantenimiento de datos y consultas SQL - PL/SQL',
       'Administración de equipos, servidores y redes, garantizando su correcto funcionamiento y seguridad',
       'Mantenimiento de software ERP, asegurando su rendimiento y funcionalidad constante para la operación empresarial'
-    ]
+    ],
+    website: 'https://suiscagroup.com/es'
   }
 ];
 
@@ -207,7 +212,16 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('inicio');
   const [isScrolled, setIsScrolled] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-   const [certificatesModalOpen, setCertificatesModalOpen] = useState(false);
+  const [certificatesModalOpen, setCertificatesModalOpen] = useState(false);
+
+  const experienceYearsRaw = experience.reduce((total, exp) => {
+    const start = exp.startDate;
+    const end = exp.endDate || DateTime.now();
+    const years = end.diff(start, 'years').years;
+    return total + years;
+  }, 0);
+
+  const experienceYears = experienceYearsRaw < 1 ? 1 : Math.floor(experienceYearsRaw);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -449,7 +463,8 @@ export default function Portfolio() {
                     Mi Historia
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    Apasionado por la ingeniería del software, el desarrollo backend y el análisis de datos. Con {getAgeFromBirthdate('2003-11-15')} años y 1 año de experiencia laboral, aunque llevo desarrollando software, participando en proyectos y en competiciones desde los 15 años. En este tiempo, he aprendido tanto de la teoría como del trabajo práctico, enfrentándome a desafíos reales que me han permitido crecer como desarrollador
+                    Apasionado por la ingeniería del software, el desarrollo backend y el análisis de datos. Con {getAgeFromBirthdate('2003-11-15')} años y{' '}
+                    {experienceYears}{isDecimalAboveHalf(experienceYearsRaw) ? '+' : ''} año{experienceYears >= 2 ? 's' : ''} de experiencia laboral, aunque llevo desarrollando software, participando en proyectos y en competiciones desde los 15 años. En este tiempo, he aprendido tanto de la teoría como del trabajo práctico, enfrentándome a desafíos reales que me han permitido crecer como desarrollador
                   </p>
                 </div>
 
@@ -532,6 +547,7 @@ export default function Portfolio() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.2, duration: 0.8 }}
                 viewport={{ once: true }}
+                onClick={() => window.open(exp.website, '_blank')}
               >
                 {/* Timeline dot */}
                 <div className="relative z-10 flex-shrink-0">
@@ -542,7 +558,7 @@ export default function Portfolio() {
                   >
                     <Briefcase className="w-8 h-8 text-white" />
                   </motion.div>
-                  {exp.current && (
+                  {!exp.endDate && (
                     <motion.div
                       className="absolute -top-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-slate-900 flex items-center justify-center"
                       animate={{ scale: [1, 1.2, 1] }}
@@ -564,7 +580,7 @@ export default function Portfolio() {
                         <div className="flex-1">
                           <CardTitle className="text-2xl text-white mb-2 flex items-center">
                             {exp.title}
-                            {exp.current && (
+                            {!exp.endDate && (
                               <Badge className="ml-3 bg-green-500 text-white animate-pulse">
                                 <div className="w-2 h-2 bg-white rounded-full mr-2"></div>
                                 Actual
@@ -577,7 +593,7 @@ export default function Portfolio() {
                           <div className="flex flex-col sm:flex-row sm:items-center text-gray-400 space-y-1 sm:space-y-0 sm:space-x-4">
                             <div className="flex items-center">
                               <Calendar className="w-4 h-4 mr-2 text-purple-400" />
-                              {exp.period}
+                              {stringToTitleCase(exp.startDate.toFormat('MMMM yyyy'))} - {exp.endDate ? stringToTitleCase(exp.endDate.toFormat('MMMM yyyy')) : 'Actualidad'}
                             </div>
                             <div className="flex items-center">
                               <MapPin className="w-4 h-4 mr-2 text-purple-400" />
